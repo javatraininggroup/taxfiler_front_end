@@ -1,0 +1,51 @@
+<!--Create a Web page which accepts principle amount and rate of interest and
+Period from the user and Calculate EMI on Electronic Items.
+
+Principle Amount(p): Text box with number type.Minimum:10000 and maximum:200000
+
+Rate of Interest(r): Text box with number type.Minimum:6 and Maximum:16
+
+Period in Months(n): Text box with number type.Minimum:6 and Maximum:70
+
+Formulae: (p*r*((1+r)**n))/((1+r)**(n-1))-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Forms</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-COMPATIBLE" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+<h1>EMI Calculator</h1>
+<p>Enter Minimum Principle Amount:10000,Rate of Interest:6,Time:6</p>
+<form>
+    <div class="form-group">
+        <label for="amt" class="label">Principle Amount</label>
+        <input type="number" class="form-control" name="amt" id="amt" min="10000" max="2000000">
+    </div>
+
+    <div class="form-group">
+        <label for="interestRate" class="label">Rate of Interest</label>
+        <input type="number" class="form-control" name="interestRate" id="interestRate" min="6" max="16">
+    </div>
+
+    <div class="form-group">
+        <label for="period" class="label">Time Period(in months)</label>
+        <input type="number" class="form-control" name="period" id="period" min="6" max="70">
+    </div>
+
+    <button type="button" onclick="calcualteEmi()">Calculate EMI</button>
+    <p  id="result"></p>
+
+    <script src="./EMI.js"></script>
+</form>
+</body>
+</html>
