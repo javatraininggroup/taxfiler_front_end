@@ -1,0 +1,242 @@
+.ui-tooltip-btf{
+	height: 40px;
+	width: 180px;
+}
+.ui-tooltip-btf div{
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 30px;
+	color: #026CA5;
+	
+}
+
+.header-bottom {
+
+	padding:1px 0px;
+	background-color: #026ca5 !important;
+
+}
+	
+/* Navigation */
+nav {width:100%; height:40px; background:#026ca5;}
+nav li {list-style:none; display:inline; line-height:40px; font-weight:400}
+nav li a {color:#fff; text-decoration:none; font-family: 'Open Sans', sans-serif; font-size:1.4em;padding:0 15px;
+	border-right:1px solid #868686;}
+nav li a.last {border:none}
+nav .nav-right {float:right; color:#fff; font-size:1.3em; font-weight:bold; text-align: left; width: 280px; padding-top:8px; text-decoration:blink}
+nav .nav-right span {font-size:0.9em; font-weight:200}
+nav .nav-right span a {color:#fff; font-style:italic}
+nav .nav-right span a:hover{text-decoration:underline}
+
+.selectedNav{
+	background-color: #FFFFFF;
+    color: #0865A4 !important;
+    padding-bottom: 12px;
+    padding-top: 12px;
+}
+
+
+/** page structure **/
+
+.wrapper { 
+  display: block;
+  margin: 0 auto;
+  width: 990px;
+  margin-left: 300px;
+}
+
+#menu {
+  display: block;
+  position: relative;
+  z-index: 99;
+  width: 600px;
+  
+}
+
+#menu li {
+  display: block;
+  float: left;
+  
+}
+#menu li a {
+  position: relative;
+  text-decoration: none;
+  padding-top: 9px;
+  padding-bottom: 11px;
+  color: #fff;
+}
+#menu li a:hover, #menu li a.active {
+  background: #fff;
+  color: #2c343b;
+ 
+}
+
+#menu li ul {
+  display: none;
+  position: absolute;
+  top: 60px;
+  width: 200px;
+  background: #fff;
+  z-index: -1;
+  -webkit-box-shadow: 0 2px 7px rgba(0,0,0,0.45);
+  -moz-box-shadow: 0 2px 7px rgba(0,0,0,0.45);
+  box-shadow: 0 2px 7px rgba(0,0,0,0.45);
+}
+#menu li ul li {
+  display: block;
+  width: 200px;
+}
+#menu li ul li a {
+  display: block;
+  float: none;
+  color: #4e5b67;
+  font-size: 1.35em;
+  line-height: 50px;
+  padding: 0 15px;
+}
+#menu li ul li a:hover {
+  background: #384958;
+  color: #fff;
+}
+
+#menu li ul.expanded {
+  width: 400px;
+}
+#menu li ul.expanded li { margin-right: 200px; }
+
+
+
+#menu li ul li ul {
+  display: none;
+  position: absolute;
+  left: 200px;
+  top: 0;
+  height: 100%;
+  background: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+#menu li ul li ul li a { color: #fff; background: #357FAD; width:300px;}
+#menu li ul li ul li a:hover { text-decoration: none; width:300px;}
+
+#menu li ul li.blue a:hover, #menu li ul li.blue a.active { background: #0A5E93; color: #fff; }
+#menu li ul li.blue ul { background: #0A5E93; }
+
+#menu li ul li.purple a:hover, #menu li ul li.purple a.active { background: #4f4c83; color: #fff; }
+#menu li ul li.purple ul { background: #4f4c83; }
+
+#menu li ul li.green a:hover, #menu li ul li.green a.active { background: #65834c; color: #fff; }
+#menu li ul li.green ul { background: #65834c; }
+
+#menu li ul li.aqua a:hover, #menu li ul li.aqua a.active { background: #4c7983; color: #fff; }
+#menu li ul li.aqua ul { background: #4c7983; color: #fff; }
+
+#menu li ul li.red a:hover, #menu li ul li.red a.active { background: #834c4c; color: #fff; }
+#menu li ul li.red ul { background: #834c4c; }
+
+#menu li ul li.gold a:hover, #menu li ul li.gold a.active { background: #97944c; color: #fff; }
+#menu li ul li.gold ul { background: #97944c; }
+
+
+/** clearfix **/
+.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.clearfix { display: inline-block; }
+ 
+html[xmlns] .clearfix { display: block; }
+* html .clearfix { height: 1%; }
+
+
+
+
+
+
+#sidemenu {
+
+	float:left;
+
+	width:228px;
+
+	color:#FFF;
+
+	padding-top: 15px;
+	padding-bottom: 15px;
+
+	position: relative;
+	
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#026ca5+0,2989d8+50,7db9e8+100 */
+background: #026ca5; /* Old browsers */
+background: -moz-linear-gradient(top, #026ca5 0%, #2989d8 50%, #7db9e8 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#026ca5), color-stop(50%,#2989d8), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #026ca5 0%,#2989d8 50%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #026ca5 0%,#2989d8 50%,#7db9e8 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #026ca5 0%,#2989d8 50%,#7db9e8 100%); /* IE10+ */
+background: linear-gradient(to bottom, #026ca5 0%,#2989d8 50%,#7db9e8 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#026ca5', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+}
+
+#sidemenu a{
+	color: #fff;
+}
+#sidemenu li{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#026ca5+0,2989d8+50,7db9e8+100 */
+background: #026ca5; /* Old browsers */
+background: -moz-linear-gradient(top, #026ca5 0%, #2989d8 50%, #7db9e8 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#026ca5), color-stop(50%,#2989d8), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #026ca5 0%,#2989d8 50%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #026ca5 0%,#2989d8 50%,#7db9e8 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #026ca5 0%,#2989d8 50%,#7db9e8 100%); /* IE10+ */
+background: linear-gradient(to bottom, #026ca5 0%,#2989d8 50%,#7db9e8 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#026ca5', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */ 
+
+
+}
+
+
+.sidemenu{
+	position: relative;
+	float:left;
+	width:228px;
+	height: 100%;
+	background: #026ca5; /* Old browsers */
+	background: -moz-linear-gradient(top, #026ca5 0%, #2989d8 50%, #7db9e8 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#026ca5), color-stop(50%,#2989d8), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #026ca5 0%,#2989d8 50%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #026ca5 0%,#2989d8 50%,#7db9e8 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #026ca5 0%,#2989d8 50%,#7db9e8 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #026ca5 0%,#2989d8 50%,#7db9e8 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#026ca5', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */ 
+	
+	}
+	
+.sidemenu ul{ margin:0; padding:0; list-style:none;}
+.sidemenu li{border-bottom: 1px solid #29333B; cursor:pointer; }
+.sidemenu li.first{border-top: 1px solid #29333B; }
+.sidemenu li:hover{ background-color:#72B6EA; color:#fff;}
+.sidemenu li a:hover{ color:#fff !important;}
+.sidemenu li .circle{ 
+width:8px; height:8px; 
+border:1px #CCCCCC solid; 
+-webkit-border-radius: 12px;  
+-moz-border-radius: 12px; 
+border-radius:12px;
+display: inline-block;
+margin: 0 7px; 
+background-color:#CC3300;
+}
+.sidemenu li a{color: #FFFFFF; text-decoration: none;font-size:14px;padding: 15px 0 15px 15px;width: 228px; display: block !important;}
+.sidemenu .substages{width:10px; border-bottom:1px #DDDDDD solid;}
+.sidemenu li .arrow{ border-bottom: 10px solid transparent;border-right: 10px solid #ffffff;border-top: 10px solid transparent;display: inline-block;float: right;height: 0;}
+
+.darrow{ display:inline-table;}
+.emp-subdiv li .darrow { border-bottom: 10px solid transparent;  border-left: 10px solid transparent;  border-right: 10px solid #ffffff;}
+
+.sidemenu li.stage-current{border-top: 1px solid #29333B; background-color:#676767; }
+
+.sidemenu li a.active{
+	color: #FFFFFF; text-decoration: none;font-size:14px; background-color: #60A8E2;padding: 15px 0 15px 15px;width: 214px; display: block !important;
+	
+	}
+

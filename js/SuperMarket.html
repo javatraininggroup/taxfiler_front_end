@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-COMPATIBLE" content="ie=edge">
+    <title>Forms</title>
+</head>
+
+<body>
+
+    <h1>Super Market Accounts</h1>
+    <form>
+    Name of the Item:-&nbsp;<input type="text" id="item" name="item" value=""><br><br>
+    Price of the Item:-&nbsp;<input type="number" id="price" name="item" value=""><br><br>
+    How Discount of the Item:-&nbsp;<input type="number" id="discount" name="item" value=""><br><br>
+    </form>
+    <p id="finalprice"></p>
+  
+       <button type="button" onclick="purchase()">Submit</button>
+    <script>
+        function purchase()
+        {
+            var grocery=document.getElementById('price').value;
+            if(grocery>=0 && grocery<=500)
+            {
+                document.getElementById('finalprice').innerHTML="The price is " + grocery + "discount is 0"
+            }
+            else if(grocery>=500 && grocery<=800)
+            {
+                document.getElementById('finalprice').innerHTML="The price is " + grocery + "discount is 10%"
+            }
+            else if(grocery>=800 && grocery<=1300)
+            {
+                document.getElementById('finalprice').innerHTML="The price is " + grocery + "discount is 30%"
+            }
+            else
+            {
+                document.getElementById('finalprice').innerHTML="The price is " + grocery + "discount is 50%"
+            }
+        }
+    </script>
+</body>
+
+</html>
