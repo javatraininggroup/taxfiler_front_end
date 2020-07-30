@@ -77,7 +77,7 @@
 		var maxDate = new Date();
 		maxDate.setDate(maxDate.getDate() + 30);
 		
-		$( "#dob" ).datepicker({ maxDate: maxDate,changeMonth: true,
+		$( "#dateOfBirth" ).datepicker({ maxDate: maxDate,changeMonth: true,
 	        changeYear: true,
 	        yearRange: "-50:-10" });
 	});
@@ -330,8 +330,8 @@ function delRes(id){
 	$("#"+id).remove();
 }
 	$(function(){
-			$("#marital_status").change(function(){
-				if($("#marital_status").val()!='Single'){
+			$("#martialStatus").change(function(){
+				if($("#martialStatus").val()!='Single'){
 					$("#spouseDetails").show('slow');
 					$("input[name='dt_marriage']").show();
 					$("#dt_marriage_lbl").show();
@@ -343,8 +343,8 @@ function delRes(id){
 						}
 				});
 
-			$("#marital_status").val('');
-			$("#marital_status").change();
+			$("#martialStatus").val('');
+			$("#martialStatus").change();
 			$("#time_zone").val('');
 			
 			
@@ -354,7 +354,7 @@ function delRes(id){
 		var maxDate = new Date();
 		maxDate.setDate(maxDate.getDate() + 30);
 		
-		$( "#dob" ).datepicker({
+		$( "#dateOfBirth" ).datepicker({
 			maxDate : maxDate,
 			changeMonth: true,
 	        changeYear: true,
@@ -615,7 +615,7 @@ var tpmenuId = "taxpayerinfo";
 </thead>
 		<tbody>
 		<tr><td width="110px">Marital Status</td><td colspan="5">
-		<select name="marital_status" id="marital_status">
+		<select name="martialStatus" id="martialStatus">
 			<option value="" selected="">Select </option>
 			<option value="Single">Single</option>
 			<option value="Marriage">Married</option>
@@ -625,41 +625,41 @@ var tpmenuId = "taxpayerinfo";
 		  </select>
 		
 		</td></tr>
-       		<tr><td>Name(As per SSN)</td><td colspan="5"><input size="16" type="text" placeholder="Last Name" name="last_name" value="" /><input size="12" type="text" placeholder="Middle Name" name="middle_name" value="" /><input size="16" type="text" name="first_name" placeholder="First Name" value="" /></td></tr>
-       		<tr><td>SSN</td><td><input type="text" class="ssn" name="ssn" value="" /></td><td>Occupation</td><td colspan="3"><input type="text" name="occupation" value="" /></td></tr>       		
-       		<tr><td >Date Of Birth</td><td><input type="text" id="dob" placeholder="MM/DD/YYYY" name="dob" value="" /></td><td id="dt_marriage_lbl">Date of Marriage</td><td colspan="3"><input type="text" class="dp" placeholder="MM/DD/YYYY" name="dt_marriage" value="" /></td></tr>
-       		<tr><td>First Date of Entry in US</td><td><input type="text" class="dp" name="first_dt_entry" value="" /></td><td>Type of Visa</td><td colspan="3"><input type="text" name="type_of_visa" value="" /></td></tr>
-       		<tr><td colspan="2"></td><td>Citizenship</td><td colspan="3"><input type="text" name="citizenship" value="" /></td></tr>
+       		<tr><td>Name(As per SSN)</td><td colspan="5"><input size="16" type="text" placeholder="Last Name" name="lastName" value="" id="lastName"/><input size="12" type="text" placeholder="Middle Name" name="middle_name" value="" id="middleName" /><input size="16" type="text" id="firstName" name="first_name" placeholder="First Name" value="" /></td></tr>
+       		<tr><td>SSN</td><td><input type="text" class="ssn" name="ssn" value="" id="ssn" /></td><td>Occupation</td><td colspan="3"><input type="text" id="occupation" name="occupation" value="" /></td></tr>       		
+       		<tr><td >Date Of Birth</td><td><input type="text" id="dateOfBirth" placeholder="MM/DD/YYYY" name="dateOfBirth" value="" /></td><td id="dt_marriage_lbl">Date of Marriage</td><td colspan="3"><input type="text" class="dp" placeholder="MM/DD/YYYY" id="dateOfMarriage" name="dt_marriage" value="" /></td></tr>
+       		<tr><td>First Date of Entry in US</td><td><input type="text" class="dp" id="firstDateOfEntyInUS" name="first_dt_entry" value="" /></td><td>Type of Visa</td><td colspan="3"><input id="typeOfVisa" type="text" name="type_of_visa" value="" /></td></tr>
+       		<tr><td colspan="2"></td><td>Citizenship</td><td colspan="3"><input type="text" id="citizenship" name="citizenship" value="" /></td></tr>
        		
        		
        		<tr><td colspan="6"><b>Contact Details<b></b></td></tr>
-       		<tr><td>Current Address</td><td colspan="5"><input placeholder="Address" type="text" name="address1" value="NULL" /><input type="text" placeholder="City" name="city" value="" /><input type="text" placeholder="Apt No" name="apt_no" value="" /></td></tr>
-       		<tr><td></td><td colspan="5"><input type="text" placeholder="State" name="state" value="" /><input type="text" placeholder="Zip" name="zip" value="" /><input type="text" placeholder="Country" name="country" value="" /></td></tr>
-       		<tr><td>Contact</td><td colspan="5"><input placeholder="Mobile Phone" type="text" name="mobile_phone" value="9062927763" /><input type="text" placeholder="Alternate Number" name="work_phone" value="" />
-       		<input type="text" placeholder="India Number" name="indian_phone" value="" />	<input placeholder="Primary Email" type="text" name="primary_email" value="chandu.p@besttaxfiler.com" /></td></tr>
-       		<tr><td>Time Zone</td><td colspan="5"><select name="time_zone" id="time_zone"><option value="">Select TimeZone</option><option value="America/New_York">EST</option><option value="America/Chicago">CST</option><option value="America/Phoenix">MST</option><option value="America/Los_Angeles">PST</option><option value="Asia/Calcutta">IST</option></select></td></tr>
+       		<tr><td>Current Address</td><td colspan="5"><input id="address" placeholder="Address" type="text" name="address1" value="NULL" /><input type="text" placeholder="City"  id="city" name="city" value="" /><input type="text" placeholder="Apt No" id="aptNo" name="apt_no" value="" /></td></tr>
+       		<tr><td></td><td colspan="5"><input type="text" placeholder="State" id="state" name="state" value="" /><input type="text" placeholder="Zip" name="zip" value="" id="zip"/><input type="text" placeholder="Country" name="country" id="country" value="" /></td></tr>
+       		<tr><td>Contact</td><td colspan="5"><input placeholder="Mobile Phone" type="text" id="mobilePhone" name="mobile_phone" value="9062927763" /><input type="text" placeholder="Alternate Number" id="alternateNumber" name="work_phone" value="" />
+       		<input type="text" placeholder="India Number" id="indiaNumber" name="indian_phone" value="" />	<input placeholder="Primary Email" type="text" name="primary_email" id="email" value="chandu.p@besttaxfiler.com" /></td></tr>
+       		<tr><td>Time Zone</td><td colspan="5"><select name="time_zone" id="timeZone"><option value="">Select TimeZone</option><option value="America/New_York">EST</option><option value="America/Chicago">CST</option><option value="America/Phoenix">MST</option><option value="America/Los_Angeles">PST</option><option value="Asia/Calcutta">IST</option></select></td></tr>
 
        		<tr><td colspan="6"><b>Residency Details for States</b></td></tr>
        		<tr><td colspan="6">
        		
        		<table width="100%">
        			<tr><td><b>Tax Year</b></td><td><b>States Resided</b></td><td colspan="4"><b>Period of stay (Start and End Date)</b></td></tr>
-       			<tr><td>2019<input type="hidden" name="residence_tax_year1" value="2019"></td><td colspan="5">
+       			<tr><td>2019<input type="hidden" id="residencyDetailsforStates" name="residence_tax_year1" value="2019"></td><td colspan="5">
        			<table width="100%"><tbody id="res1">
        			       			<tr id="0res1"><td>
-       			<input placeholder="State Resided" type="text" name="residence_states1[]" size="10" value="" /></td><td colspan="4"><input type="text" class="dp" placeholder="Start Date" name="residence_stay_start_dt1[]" value="" />-<input type="text" class="dp" placeholder="End Date"  name="residence_stay_end_dt1[]" value="" /><a href="javascript:addRes('res1')" class='plus'>+</a></td></tr>
+       			<input placeholder="State Resided" type="text" id="stateResided" name="residence_states1[]" size="10" value="" /></td><td colspan="4"><input type="text" class="dp" placeholder="Start Date" id="startDate" name="residence_stay_start_dt1[]" value="" />-<input type="text" class="dp" placeholder="End Date"  name="residence_stay_end_dt1[]" id="endDate" value="" /><a href="javascript:addRes('res1')" class='plus'>+</a></td></tr>
 	       			       		</tbody></table></td></tr>
        			
        			<tr><td>2018<input type="hidden" name="residence_tax_year2" value="2018"></td><td colspan="5">
        			<table width="100%"><tbody id="res2">
        			       			<tr id="0res2"><td>
-       			<input placeholder="State Resided" type="text" name="residence_states2[]" size="10" value="" /></td><td colspan="4"><input type="text" class="dp" placeholder="Start Date" name="residence_stay_start_dt2[]" value="" />-<input type="text" class="dp" placeholder="End Date"  name="residence_stay_end_dt2[]" value="" /><a href="javascript:addRes('res2')" class='plus'>+</a></td></tr>
+       			<input placeholder="State Resided" type="text" name="residence_states2[]" size="10" value="" /></td><td colspan="4"><input type="text" class="dp" placeholder="Start Date" name="residence_stay_start_dt2[]" value=""  id="startDate"/>-<input type="text" class="dp" id="endDate" placeholder="End Date"  name="residence_stay_end_dt2[]" value="" /><a href="javascript:addRes('res2')" class='plus'>+</a></td></tr>
 	       			       		</tbody></table></td></tr>
        			
        			<tr><td>2017<input type="hidden" name="residence_tax_year3" value="2017"></td><td colspan="5">
        			<table width="100%"><tbody id="res3">
        			       			<tr id="0res3"><td>
-       			<input placeholder="State Resided" type="text" name="residence_states3[]" size="10" value="" /></td><td colspan="4"><input type="text" class="dp" placeholder="Start Date" name="residence_stay_start_dt3[]" value="" />-<input type="text" class="dp" placeholder="End Date"  name="residence_stay_end_dt3[]" value="" /><a href="javascript:addRes('res3')" class='plus'>+</a></td></tr>
+       			<input placeholder="State Resided" type="text" name="residence_states3[]" size="10" value="" /></td><td colspan="4"><input type="text" class="dp" placeholder="Start Date" name="residence_stay_start_dt3[]" value="" />-<input type="text" class="dp" placeholder="End Date"  id="endDate" name="residence_stay_end_dt3[]" value="" /><a href="javascript:addRes('res3')" class='plus'>+</a></td></tr>
 	       			       		</tbody></table></td></tr>
        			
        		</table>
@@ -689,10 +689,10 @@ var tpmenuId = "taxpayerinfo";
        		<td colspan="2">
        		<table width="90%">
        		<tr>
-       		       							<td>2018</td><td width="30%"><input type="checkbox" name="sp_itin_previous_years[]" value="2018"  /></td>
-       							       							<td>2017</td><td width="30%"><input type="checkbox" name="sp_itin_previous_years[]" value="2017"  /></td>
-       							       							<td>2016</td><td width="30%"><input type="checkbox" name="sp_itin_previous_years[]" value="2016"  /></td>
-       							       						</tr>
+				<td>2018</td><td width="30%"><input type="checkbox" name="sp_itin_previous_years[]" value="2018"  /></td>
+									<td>2017</td><td width="30%"><input type="checkbox" name="sp_itin_previous_years[]" value="2017"  /></td>
+									<td>2016</td><td width="30%"><input type="checkbox" name="sp_itin_previous_years[]" value="2016"  /></td>
+								</tr>
        						</table>
        						</td></tr>
        		       		<tr><td colspan="5">
@@ -824,9 +824,49 @@ s0.parentNode.insertBefore(s1,s0);
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
+  $(document).ready(function(){
+    	$("#saveNext").click(function(e) { 
+        var taxpayerinfo = { };
+        taxpayerinfo.martialStatus = $('#martialStatus').val();
+        taxpayerinfo.lastName = $('#lastName').val();
+        taxpayerinfo.middleName = $('#middleName').val();
+        taxpayerinfo.firstName = $('#firstName').val();
+		taxpayerinfo.firstName = $('#ssn').val();
+		taxpayerinfo.firstName = $('#occupation').val();
+		taxpayerinfo.dateOfBirth = $('#dateOfBirth').val();
+		taxpayerinfo.dateOfMarriage = $('#dateOfMarriage').val();
+        taxpayerinfo.firstDateOfEntyInUS = $('#firstDateOfEntyInUS').val();
+        taxpayerinfo.typeOfVisa = $('#typeOfVisa').val();
+		taxpayerinfo.citizenship = $('#citizenship').val();
+		taxpayerinfo.contactDetails = $('#contactDetails').val();
+        taxpayerinfo.address = $('#address').val();
+        taxpayerinfo.city = $('#city').val();
+        taxpayerinfo.aptNo = $('#aptNo').val();
+        taxpayerinfo.state = $('#state').val();
+        taxpayerinfo.zip = $('#zip').val();
+        taxpayerinfo.country = $('#country').val();
+        taxpayerinfo.mobilePhone = $('#mobilePhone').val();
+		taxpayerinfo.alternateNumber = $('#alternateNumber').val();
+		taxpayerinfo.indiaNumber = $('#indiaNumber').val();
+        taxpayerinfo.email = $('#email').val();
+		taxpayerinfo.timeZone = $('#timeZone').val();
+		taxpayerinfo.residencyDetailsforStates = $('#residencyDetailsforStates').val();
+		taxpayerinfo.stateResided = $('#stateResided').val();
+        taxpayerinfo.startDate = $('#startDate').val();
+        taxpayerinfo.endDate = $('#endDate').val();
+		var taxpayerinfoObj = JSON.stringify(taxpayerinfo);
+		alert(taxpayerinfoObj);
+		});
+	});
+
 </script>
-
-
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+	<!-- <script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.main.js"></script>
+	<script src="js/jquery.validate.js"></script>
+	<script src="js/jquery.js"></script> -->
+	<!-- <script type='text/javascript' src='js/taxpayer.js'></script> -->
+	
 </body>
 
 <!-- Mirrored from themes.mudodesigns.com/adminbase/ by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 04 Jun 2010 19:45:05 GMT -->
