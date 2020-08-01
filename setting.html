@@ -51,7 +51,10 @@ var sideMenuId ="SMeditprofile";
  <script>
 
 	$(document).ready(function(){
-		
+	$("#username").text(localStorage.getItem("username"));
+	$("#email").val(localStorage.getItem("email"));
+	$("#name").val(localStorage.getItem("username"));
+	$("#phone1").val(localStorage.getItem("phone"));
 		
 		$(".selectyear").change(function(){
     this.submit();
@@ -132,8 +135,8 @@ else
   <div class="header-top tr">
 
 			<div style="float: right; height: 20px;">
-				&nbsp;&nbsp;&nbsp; <span class="hello_txt">Hello <span
-					class="hello_name">P Chandrakanth</span></span> | <a href="logout.php">Logout</a>
+				&nbsp;&nbsp;&nbsp; <span class="hello_txt">Hello <span id="username"
+					class="hello_name"></span></span> | <a href="logout.php">Logout</a>
 			</div>
 
 			<!-- start dialogue box -->
@@ -393,7 +396,7 @@ else
 
                 <label>Name:</label>
 
-                <input type="text" name="name" id="name" value="P Chandrakanth" />
+                <input type="text" name="name" id="name" />
 
               </div>
 
@@ -405,7 +408,7 @@ else
 
                 <label>Email:</label>
 
-                <input type="text" name="email" id="email" value="chandu.p@besttaxfiler.com" readonly="readonly"/>
+                <input type="text" name="email" id="email" readonly="readonly"/>
 
               </div>
 
@@ -473,7 +476,7 @@ else
 
                 <label>Phone1:</label>
 
-                <input type="text" name="phone1" id="phone1" value="9062927763" class="required"/>
+                <input type="text" name="phone1" id="phone1" class="required"/>
 
               </div>
 

@@ -51,6 +51,8 @@
 
 	$(document).ready(function(){
 	$("#username").text(localStorage.getItem("username"));
+	$("#email").val(localStorage.getItem("email"));
+	$("#mobilePhone").val(localStorage.getItem("phone"));
 			
 		$(".selectyear").change(function(){
     this.submit();
@@ -547,10 +549,9 @@ var tpmenuId = "taxpayerinfo";
 									<thead>
 										<tr>
 											<td><a id="taxpayerinfo"
-												href="tax filer-taxer info.html" class="inactive_menu fpe1">Personal Info
-													</a></td>
+												href="tax filer-taxer info.html" class="inactive_menu fpe1">Personal Info</a></td>
 											<td><a id="dependentinfo" class="inactive_menu fpe2"
-												href="dependents-info.html">Dependent Information</a></td>
+												href="dependents-info.html">Dependent Info</a></td>
 											<td><a id="otherincomeinfo" class="inactive_menu fpe4"
 												href="tax filing-other income.html">Other Income Info</a></td>
 													<!--  added below new menu -->
@@ -565,7 +566,7 @@ var tpmenuId = "taxpayerinfo";
 												href="fbar-info.html">FBAR</a></td>
 											<td><a id="otherinfo" class="inactive_menu fpe4"
 												href="tax filing-other information.html">Other
-													Information</a></td>
+													Info</a></td>
 										</tr>
 									</thead>
 								</table>
@@ -637,10 +638,10 @@ var tpmenuId = "taxpayerinfo";
 											   <input type="text" placeholder="Zip" name="zip" id="zip" value="" />
 											   <input type="text" placeholder="Country" name="country" id="country" value="" /></td></tr>
 										   <tr><td>Contact</td><td colspan="5">
-											   <input placeholder="Mobile Phone" type="text" id="mobilePhone" name="mobilePhone" value="9062927763" />
+											   <input placeholder="Mobile Phone" type="text" id="mobilePhone" name="mobilePhone" />
 											   <input type="text" placeholder="Alternate Number" id="alternateNumber" name="alternateNumber" value="" />
 										   <input type="text" placeholder="India Number" id="indiaNumber" name="indiaNumber" value="" />	
-										   <input placeholder="Primary Email" type="text" name="email" id="email" value="chandu.p@besttaxfiler.com" /></td></tr>
+										   <input placeholder="Primary Email" type="text" name="email" id="email" /></td></tr>
 										   <tr><td>Time Zone</td>
 											<td colspan="5"><select id="timeZone" name="timeZone">
 												<option value="">Select TimeZone</option><option value="America/New_York">EST</option><option value="America/Chicago">CST</option><option value="America/Phoenix">MST</option><option value="America/Los_Angeles">PST</option><option value="Asia/Calcutta">IST</option></select></td></tr>
