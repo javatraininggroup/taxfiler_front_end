@@ -1491,7 +1491,8 @@ document.getElementById('logindiv').innerHTML='<iframe id="loginframe" src="" wi
              success:function(data, textStatus, jqXHR ,response){
                 // $('#msg').html(data).fadeIn('slow');
 				// $('#msg').html("Login successfully").fadeIn('slow') //also show a success message 
-
+				alert(data);
+				alert(JSON.stringify(data));
 				$('#msg').text('Login Successfully');
 				var delay = 1000; 
         		var url = 'homepage.html'
