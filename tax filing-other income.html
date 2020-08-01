@@ -48,7 +48,7 @@
  <script>
 
 	$(document).ready(function(){
-		
+	$("#username").text(localStorage.getItem("username"));		
 		
 		$(".selectyear").change(function(){
     this.submit();
@@ -129,8 +129,8 @@ else
   <div class="header-top tr">
 
 			<div style="float: right; height: 20px;">
-				&nbsp;&nbsp;&nbsp; <span class="hello_txt">Hello <span
-					class="hello_name">P Chandrakanth</span></span> | <a href="logout.php">Logout</a>
+				&nbsp;&nbsp;&nbsp; <span class="hello_txt">Hello <span id="username"
+					class="hello_name"></span></span> | <a href="logout.php">Logout</a>
 			</div>
 
 			<!-- start dialogue box -->
@@ -503,13 +503,26 @@ var tpmenuId = "otherincomeinfo";
 		<table border="0" style="width: auto;">
 		<thead>
 			<tr>
-				<td><a id="taxpayerinfo" href="tax filer-taxer info.html"  class="inactive_menu fpe1">Taxpayer Info</a></td>
-				<td><a id="dependentinfo"  class="inactive_menu fpe2" href="dependents-info.html">Dependent Info</a></td>
-				<td><a id="bankdetails"  class="inactive_menu fpe4" href="tax filing-bank details.html">BankDetails</a></td>
-				<td><a id="otherincomeinfo"  class="inactive_menu fpe4" href="tax filing-other income.html">Other Income Information</a></td>
-				<td><a id="additionalinfo"  class="inactive_menu fpe4" href="tax filing-additional info.html">Additional Information</a></td>
-				<td><a id="fbarinfo"  class="inactive_menu fpe4" href="fbar-info.html">FBAR</a></td>				
-				<td><a id="otherinfo"  class="inactive_menu fpe4" href="tax filing-other information.html">Other Information</a></td>	
+			<td><a id="taxpayerinfo"
+												href="tax filer-taxer info.html" class="inactive_menu fpe1">Personal Info
+													</a></td>
+											<td><a id="dependentinfo" class="inactive_menu fpe2"
+												href="dependents-info.html">Dependent Information</a></td>
+											<td><a id="otherincomeinfo" class="inactive_menu fpe4"
+												href="tax filing-other income.html">Other Income Info</a></td>
+													<!--  added below new menu -->
+											<td><a id="expense" class="inactive_menu fpe4"
+												href="tax filing-bank details.html">Expenses&Contribution</a></td>
+											<td><a id="additionalinfo" class="inactive_menu fpe4"
+												href="tax filing-additional info.html">Additional
+													Income</a></td>
+											<td><a id="bankdetails" class="inactive_menu fpe4"
+												href="tax filing-bank details.html">BankDetails</a></td>
+											<td><a id="fbarinfo" class="inactive_menu fpe4"
+												href="fbar-info.html">FBAR</a></td>
+											<td><a id="otherinfo" class="inactive_menu fpe4"
+												href="tax filing-other information.html">Other
+													Information</a></td>
 			</tr>
 		</thead>
 		</table>	

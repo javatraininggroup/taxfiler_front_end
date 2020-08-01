@@ -125,88 +125,48 @@ else
 
 <div id="header">
 
-  <div class="header-top tr">
 
-    <div style="float:right;height: 20px;"><span class="ask-callback" >Make an appointment/Need callback? <a href="new-message.php?callback=y">Click Here </a></span> <span class="referral_bonus_text" > Your Referral Bonus:</span><span class="referral_bonus_amt"> $0.00</span> &nbsp;&nbsp;&nbsp; <span class="hello_txt">Hello <span class="hello_name" id="username"></span></span> |  <a href="logout.php">Logout</a></div>
+<div class="header-top tr">
 
-    <!-- start dialogue box -->
+			<div style="float: right; height: 20px;">
+				&nbsp;&nbsp;&nbsp; <span class="hello_txt">Hello <span id="username"
+					class="hello_name"></span></span> | <a href="logout.php">Logout</a>
+			</div>
 
-    <!-- end dialogue box --> 
+			<!-- start dialogue box -->
 
-  </div>
+			<!-- end dialogue box -->
 
-  <div class="header-middle"> 
+		</div>
 
-	<table border="0" cellpadding="0" cellspacing="0" class="noBorder" width="100%">
-		<tr>
-				<td width="200px" style="padding: 0px;vertical-align: top;">
-		   <a id="wLogoLink" href="https://www.besttaxfiler.com/clients/index.php"><img id="logo" src="img/logo.png" alt="Logo" border="0"/> </a>
-		   <a id="mLogoLink" style="display: none;" href="https://m.besttaxfiler.com/clients/index.php"><img id="logo" src="img/logo.png" alt="Logo" border="0"/> </a>
 
-    <!-- End Logo --> 
+		<div class="header-middle">
 
-    <br class="cl" />
-		</td>
-		<td style="vertical-align: top;padding: 0px;">
-				<div style="padding-left: 20px;padding-right: 20px;" id="progressDiv">
-				  		  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr>
-  <td><div style="padding-bottom: 5px;">Your File ( <b>x</b> ) Progress is here:</div></td>
-  </tr>
-  <tr>
-  <td style="padding-left: 2px;padding-right: 2px;">
-  
-  <div style="padding-left: 5px;">
-  
-  	<div id="progressbar"></div>
+			<table border="0" cellpadding="0" cellspacing="0" class="noBorder"
+				width="100%">
+				<tr>
+					<td width="200px" style="padding: 0px; vertical-align: top;">
+						<a id="wLogoLink"
+						href="https://www.besttaxfiler.com/clients/index.php"><img
+							id="logo" src="img/updated_logo.png" alt="United Tax Filer"
+							border="0" /> </a> <!-- <a id="mLogoLink" style="display: none;" href="https://m.besttaxfiler.com/clients/index.php"><img id="logo" src="img/dummy.png" alt="Logo2" border="0"/> </a> -->
 
-  </div>
-  <div>
-  	<table width="100%" cellpadding="0" cellspacing="0" border="0">
-  	 <tr>
-  		<td width="10%">Personal Info Pending</td>
-  		<td width="12%">Upload W2,1099INT</td>
-  		<td width="12%">Under Preparation</td>
-  		<td width="14%">Payment Pending</td>
-  		<td width="14%">Your Review</td>
-  		<td width="12%">
-  		Filing  		</td>
-  	</tr>
-  	</table>
-  </div>
-  
-  </td>
-  </tr>
-  </table>
-		  		</div>
-		</td>
-	<td id="tdcallback" width="180px" style="vertical-align: top;padding: 0px;">
-		
-		
-		<div class="top-right">
-						<div class="call-back">
-							<h3>Need Help - Call Us</h3>
-							<h5>1-810-370-6666</h5>
-							<h5>1-810-740-7666</h5>
-							<h6>Mon-Fri: 9:30AM-9:30PM(EST)<br>
-							<span style="color: black;font-size: 10px !important;">91-801-901-3666(IND)</span><br /></h6>
+						<!-- End Logo --> <br class="cl" />
+					</td>
+					<td style="vertical-align: top; padding: 0px;">
+						<div style="padding-left: 20px; padding-right: 20px;"
+							id="progressDiv">
+							<table width="100%" cellpadding="0" cellspacing="0" border="0">
+							</table>
 						</div>
-					</div>
-				
-		
-	</td>
+					</td> 
 		</tr>
 	</table>
    	
 
 
-    <!-- Start Logo --> 
-
-    
-
-
-
-  </div>
+    <!-- Start Logo -->
+		</div>
 
   <div class="header-bottom"> 
 
@@ -439,13 +399,26 @@ var tpmenuId = "bankdetails";
 		<table border="0" style="width: auto;">
 		<thead>
 			<tr>
-				<td><a id="taxpayerinfo" href="tax filer-taxer info.html"  class="inactive_menu fpe1">Taxpayer Info</a></td>
-				<td><a id="dependentinfo"  class="inactive_menu fpe2" href="dependents-info.html">Dependent Info</a></td>
-				<td><a id="bankdetails"  class="inactive_menu fpe4" href="tax filing-bank details.html">BankDetails</a></td>
-				<td><a id="otherincomeinfo"  class="inactive_menu fpe4" href="tax filing-other income.html">Other Income Information</a></td>
-				<td><a id="additionalinfo"  class="inactive_menu fpe4" href="tax filing-additional info.html">Additional Information</a></td>
-				<td><a id="fbarinfo"  class="inactive_menu fpe4" href="fbar-info.html">FBAR</a></td>				
-				<td><a id="otherinfo"  class="inactive_menu fpe4" href="tax filing-other information.html">Other Information</a></td>				
+	<td><a id="taxpayerinfo"
+												href="tax filer-taxer info.html" class="inactive_menu fpe1">Personal Info
+													</a></td>
+											<td><a id="dependentinfo" class="inactive_menu fpe2"
+												href="dependents-info.html">Dependent Information</a></td>
+											<td><a id="otherincomeinfo" class="inactive_menu fpe4"
+												href="tax filing-other income.html">Other Income Info</a></td>
+													<!--  added below new menu -->
+											<td><a id="expense" class="inactive_menu fpe4"
+												href="tax filing-bank details.html">Expenses&Contribution</a></td>
+											<td><a id="additionalinfo" class="inactive_menu fpe4"
+												href="tax filing-additional info.html">Additional
+													Income</a></td>
+											<td><a id="bankdetails" class="inactive_menu fpe4"
+												href="tax filing-bank details.html">BankDetails</a></td>
+											<td><a id="fbarinfo" class="inactive_menu fpe4"
+												href="fbar-info.html">FBAR</a></td>
+											<td><a id="otherinfo" class="inactive_menu fpe4"
+												href="tax filing-other information.html">Other
+													Information</a></td>
 			</tr>
 		</thead>
 		</table>	
@@ -485,7 +458,7 @@ var tpmenuId = "bankdetails";
 	  
 	  <tr>
 	  
-	  <td>Bank Name:</td><td><input type="text" name="bankName" od="bankName" value="" ></td></tr>
+	  <td>Bank Name:</td><td><input type="text" name="bankName" id="bankName" value="" ></td></tr>
 	  <td>Routing Number (Electronic routing number):</td><td><input type="text" name="routingNumber" id="routingNumber" value="" ></td></tr>
 	  
 	  <tr>
@@ -609,16 +582,20 @@ s0.parentNode.insertBefore(s1,s0);
   }
   
   function bankdetails(){
+		var request = {};
 	  var bankInfo = { };
 	  bankInfo.bankName = $('#bankName').val();
 	  bankInfo.routingNumber = $('#routingNumber').val();
 	  bankInfo.bankAccountNumber = $('#bankAccountNumber').val();
 	  bankInfo.bankAccountType = $('#bankAccountType').val();
-	  alert(bankInfo);
-		  var bankInfoObj = JSON.stringify(bankInfo);
-		  var userId = localStorage.getItem("id");
+	request.bankDetails=bankInfo;
+	  //alert(JSON.stringify(bankInfo));
+		  var bankInfoObj = JSON.stringify(request);
+		alert(bankInfoObj);  
+		var userId = localStorage.getItem("id");
 		  var year = localStorage.getItem("year");
-		  ajax("http://34.239.168.155:8080/taxfiler-0.0.1-SNAPSHOT/api/updateuser/"userId+"/"+year+"/bankInfo", 'PUT',bankInfoObj);
+		  alert("userId: "+userId+", year:" +year);
+		  ajax("http://34.239.168.155:8080/taxfiler-0.0.1-SNAPSHOT/api/updateuser/"+userId+"/"+year+"/bankInfo", 'PUT',bankInfoObj);
   }
   
   function submitBank(){
