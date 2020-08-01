@@ -1,7 +1,6 @@
 
 
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -109,24 +108,11 @@ else
 }
 </script>
 
-	<script>
-
-	
-	$(function() {
-		$( "#progressbar" ).progressbar({
-			
-			value: -17		});
-	});
-	</script>
-
-
 </head>
 
 <body>
 
-<div id="header">
-
-  <div class="header-top tr">
+<div class="header-top tr">
 
 			<div style="float: right; height: 20px;">
 				&nbsp;&nbsp;&nbsp; <span class="hello_txt">Hello <span
@@ -248,34 +234,28 @@ else
 
   </div>
 
-</div><script type="text/javascript">
+</div> <script type="text/javascript">
 var menuId = "Mtaxfiling"; 
 var sideMenuId ="SMpersonalinfo";
+</script>
+
+<script type="text/javascript">
+$(function(){
+	$("#bankAccountType").val('');
+	$("#bankAccountType").change();
+});
 </script>
  
 <style type="text/css">
 .dp{
 	width: 90px;
 }
-.plus{
-	font-size: 25px;
-	color: green;
-	text-decoration: none !important;
-}
-.minus{
-	font-size: 25px;
-	color: red;
-	text-decoration: none !important;
-}
 tr td, thead th {
 
 	border-left:none !important;
 }
 
-
 </style>
-
- 
 <div id="page-wrapper">
 
   <div class="page">
@@ -317,7 +297,7 @@ tr td, thead th {
 				    font-size: 14px;
 				    padding: 5px 0 5px 5px !important;
 				    width: 218px !important;
-				    background-color: ##72B6EA;
+				    background-color: #72B6EA;
 					border-left: 4px white solid;
 	     	
 	     	}
@@ -368,6 +348,7 @@ tr td, thead th {
 
       <!-- Start Page Header -->
 
+
       <!-- End Page Header -->
 
 
@@ -386,10 +367,8 @@ tr td, thead th {
         <!-- Start Forms -->
 
         <div class="grid_7">
-
-	
 <script type="text/javascript">
-var tpmenuId = "otherinfo"; 
+var tpmenuId = "bankdetails"; 
 </script>
 <style>
 
@@ -408,7 +387,7 @@ var tpmenuId = "otherinfo";
 				<td><a id="otherincomeinfo"  class="inactive_menu fpe4" href="tax filing-other income.html">Other Income Information</a></td>
 				<td><a id="additionalinfo"  class="inactive_menu fpe4" href="tax filing-additional info.html">Additional Information</a></td>
 				<td><a id="fbarinfo"  class="inactive_menu fpe4" href="fbar-info.html">FBAR</a></td>				
-				<td><a id="otherinfo"  class="inactive_menu fpe4" href="tax filing-other information.html">Other Information</a></td>	
+				<td><a id="otherinfo"  class="inactive_menu fpe4" href="tax filing-other information.html">Other Information</a></td>				
 			</tr>
 		</thead>
 		</table>	
@@ -421,51 +400,57 @@ var tpmenuId = "otherinfo";
 		$("a#"+tpmenuId).addClass("active_menu");
 	});
 	$('#saveNext').on('click', function(e){
-		$("div#menu_sevice > table > tr > td > a#tax filing-additional info.html").removeClass("active_menu");
-		$("div#menu_sevice > table > tr > td > a#tax filing-fbar.html").addClass("inactive_menu");
+		$("div#menu_sevice > table > tr > td > a#bankdetails").removeClass("active_menu");
+		$("div#menu_sevice > table > tr > td > a#otherincomeinfo").addClass("inactive_menu");
 		  
 	});
 	</script>
       </div>
      
- 	
-<form action="" id="taxpayerform" method="post">
-<table border="0" width="100%" celpadding="0" cellspacing="0"  style="width: 750px">
-<tr><td><b style="color: green;"></b></td></tr>
-<tr>
-<td  style="padding: 0">
-<table class="formtable" border="1" width="100%" celpadding="0" cellspacing="0">
+
+
+<form action="" method="post">
+<table border="1" width="100%">
 
 <thead>
 
-<tr class="headingbg">
+<tr style="background-color:#C2C9D3;font-weight: bold;">
 
-<td colspan="6"><strong>Other Information</strong></td> 
+<td colspan="2">Bank Details</td>
+
 </tr>
 
 </thead>
-		<tbody>
-		<tr><td>Please update if you have any other information</td><td>
-		<textarea rows="10" cols="60" name="information"></textarea>
-		</td></tr>
-       		
-       	    
-		</tbody>
+
+<tbody>
+
+<tr>
+
+<td>Bank Name:</td><td><input type="text" name="bank_name" value=""  id="bankName"></td></tr>
+<td>Routing Number (Electronic routing number):</td><td><input type="text" name="routing_no" value="" id="routingNumber"></td></tr>
+
+<tr>
+<td>Bank Account Number:</td><td><input type="text" name="bank_acc_no" value="" id="bankAccountNumber"></td></tr>
+
+<tr>
+<td>Bank Account Type:</td><td>
+<select name="bank_acc_type" id="bankAccountType" class="required">
+		  			<option value="">Please Select--</option>
+		 			<option value="Savings">Savings</option>
+		            <option value="Checking">Checking</option>
+		        </select>
+
+
+</td></tr>
+<tr><td>
+<input type="hidden" name="customer_id" value="457168">
+<input type="hidden" name="user_id" value="1440">
+<a href="tax filing-other income.html" class="button" id="SaveNext">Save Next</a>
+</tbody>
 
 </table>
-</td></tr>
-
-
-<tr><td colspan="2" style="padding: 20px;">
-       		<input type="hidden" name="other_info_id" value="" />
-       		<input type="hidden" name="user_id" value="1440" />
-       		<input type="hidden" name="Save" value="Save" />
-       		<a href="tax filing-additional info.html" class="button" id="saveNext">Save Next</a></td></tr>
-</table>       		
 </form>
-   
-	
-	</div>
+</div>
 
 	
 	<!--  Tax Summary Table New End -->
@@ -539,6 +524,48 @@ s0.parentNode.insertBefore(s1,s0);
   })();
 
 </script>
+
+<script type="text/javascript">
+
+function ajax(url, method, reqData){
+	try{
+	 $.ajax({
+             url :url,
+             type:method,
+			 contentType: "application/json",
+             data: reqData,
+             success:function(data, textStatus, jqXHR){
+                $('#msg').text('Register Successfully');
+				var delay = 1000; 
+        		var url = 'login.html'
+        		setTimeout(function(){ window.location = url; }, delay);
+             },
+             error:function(jqXHR, textStatus, errorThrown){
+                  console.log('data',reqData);
+				   alert('something went wrong');
+             }
+         });
+	}catch (ex) {
+        alert('Error parsing response.'+ex);
+    }
+}
+
+$(document).ready(function(){
+    $("#saveNext").click(function(){
+        alert("bank details");
+		var bankDetails = { };
+	     bankDetails.bankName = $('#bankName').val();
+         bankDetails.routingNumber = $('#routingNumber').val();
+         bankDetails.bankAccountNumber = $('#bankAccountNumber').val();
+         bankDetails.bankAccountType = $('#bankAccountType').val();
+         var bankDetailsObj = JSON.stringify(bankDetails);
+		 console.log("bankDetailsObj:"+bankDetailsObj);
+		 ajax("http://34.239.168.155:8080/taxfiler-0.0.1-SNAPSHOT/api/updateUser/1/bankInfo", 'POST',bankDetailsObj);
+    });
+});
+
+</script>
+
 </body>
 
 <!-- Mirrored from themes.mudodesigns.com/adminbase/ by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 04 Jun 2010 19:45:05 GMT -->

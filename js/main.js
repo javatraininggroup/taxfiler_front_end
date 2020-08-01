@@ -1,7 +1,6 @@
 
 function ajax(url, method, reqData){
 	try{
-		//alert("inside ajax");
 	 $.ajax({
              url :url,
              type:method,
@@ -135,30 +134,12 @@ var validator = $("#registerForm").validate({
 				sourceOfKnowingSite:"Please select How do you know about Best Tax Filer",
 				preferredTimezone:"Please select Preferred time zone"
 		},invalidHandler: function() {
-           //alert("invalid handleEvent");
-		   
         },
 		submitHandler: function(form) { 
-			//	alert("submitHandler"); 
-				//alert("calling register method");
 				register()
 		}
-                
-        
- 
-    });
-	
-		/*$.validator.setDefaults({
-			submitHandler: function() { 
-                alert("hello");   
-			}
-        });*/	
-       
+    });       
 });
   });
-
-// setInterval(function() {
-//     window.top.postMessage(document.body.scrollHeight, "*");
-// }, 200); 
 
 
