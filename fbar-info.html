@@ -48,7 +48,7 @@
  <script>
 
 	$(document).ready(function(){
-		
+	$("#username").text(localStorage.getItem("username"));		
 		
 		$(".selectyear").change(function(){
     this.submit();
@@ -129,7 +129,7 @@ else
   <div class="header-top tr">
 
 			<div style="float: right; height: 20px;">
-				&nbsp;&nbsp;&nbsp; <span class="hello_txt">Hello <span
+				&nbsp;&nbsp;&nbsp; <span class="hello_txt">Hello <span id="username"
 					class="hello_name">P Chandrakanth</span></span> | <a href="logout.php">Logout</a>
 			</div>
 

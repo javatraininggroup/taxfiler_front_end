@@ -47,7 +47,7 @@
  <script>
 
 	$(document).ready(function(){
-		
+	$("#username").text(localStorage.getItem("username"));		
 		
 		$(".selectyear").change(function(){
     this.submit();
@@ -127,7 +127,7 @@ else
 
   <div class="header-top tr">
 
-    <div style="float:right;height: 20px;"><span class="ask-callback" >Make an appointment/Need callback? <a href="new-message.php?callback=y">Click Here </a></span> <span class="referral_bonus_text" > Your Referral Bonus:</span><span class="referral_bonus_amt"> $0.00</span> &nbsp;&nbsp;&nbsp; <span class="hello_txt">Hello <span class="hello_name">P Chandrakanth</span></span> |  <a href="logout.php">Logout</a></div>
+    <div style="float:right;height: 20px;"><span class="ask-callback" >Make an appointment/Need callback? <a href="new-message.php?callback=y">Click Here </a></span> <span class="referral_bonus_text" > Your Referral Bonus:</span><span class="referral_bonus_amt"> $0.00</span> &nbsp;&nbsp;&nbsp; <span class="hello_txt">Hello <span class="hello_name" id="username"></span></span> |  <a href="logout.php">Logout</a></div>
 
     <!-- start dialogue box -->
 
@@ -610,7 +610,7 @@ s0.parentNode.insertBefore(s1,s0);
 	  bankInfo.routingNumber = $('#routingNumber').val();
 	  bankInfo.bankAccountNumber = $('#bankAccountNumber').val();
 	  bankInfo.bankAccountType = $('#bankAccountType').val();
-	  //alert(bankInfo);
+	  alert(bankInfo);
 		  var bankInfoObj = JSON.stringify(bankInfo);
 		  var userId = localStorage.getItem("id");
 		  var year = localStorage.getItem("year");
