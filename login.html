@@ -1491,8 +1491,7 @@ document.getElementById('logindiv').innerHTML='<iframe id="loginframe" src="" wi
              success:function(data, textStatus, jqXHR ,response){
                 // $('#msg').html(data).fadeIn('slow');
 				// $('#msg').html("Login successfully").fadeIn('slow') //also show a success message 
-				alert(data);
-				alert(JSON.stringify(data));
+				console.log("username: "+jqXHR.responseJSON.username+", id: "+jqXHR.responseJSON.id);
 				$('#msg').text('Login Successfully');
 				var delay = 1000; 
         		var url = 'homepage.html'
@@ -1500,8 +1499,9 @@ document.getElementById('logindiv').innerHTML='<iframe id="loginframe" src="" wi
 				
              },
              error:function(jqXHR, textStatus, errorThrown){
-                  console.log('data',reqData);
-				   alert('something went wrong');
+		console.log("error: "+JSON.stringify(jqXHR)+", errorThrown:" +errorThrown+", textStatus:"+textStatus+", error: "+jqXHR.responseJSON.error);
+		$('#msg').text(jqXHR.responseJSON.error);
+		alert('something went wrong');
              }
          });
 	}catch (ex) {
