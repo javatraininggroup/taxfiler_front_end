@@ -1489,14 +1489,13 @@ document.getElementById('logindiv').innerHTML='<iframe id="loginframe" src="" wi
 			 contentType: "application/json",
              data: reqData,
              success:function(data, textStatus, jqXHR ,response){
-				//alert(data);
-				//alert(JSON.stringify(data));
-				console.log("username: "+jqXHR.responseJSON.username+", id: "+jqXHR.responseJSON.id);
-				$('#msg').text('Login Successfully');
-				var delay = 1000; 
-        		var url = 'homepage.html'
-        		setTimeout(function(){ window.location = url; }, delay);
-				
+                                // $('#msg').html("Login successfully").fadeIn('slow') //also show a success message
+                                console.log("username: "+jqXHR.responseJSON.username+", id: "+jqXHR.responseJSON.id);
+                                $('#msg').text('Login Successfully');
+                                var delay = 1000;
+                        var url = 'homepage.html'
+                        setTimeout(function(){ window.location = url; }, delay);
+
              },
              error:function(jqXHR, textStatus, errorThrown){
                   console.log('data',reqData);
