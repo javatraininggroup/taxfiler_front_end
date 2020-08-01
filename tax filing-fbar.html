@@ -504,50 +504,50 @@ var tpmenuId = "fbarinfo";
 </tr>
 <tr>
 	 <td>
-<form action=""method="post"  action="" name="fbarform" class="form" role="form"
-enctype="multipart/form-data" novalidate="novalidate" id="fbarform" method="post">
-
-<table class="formtable" border="1" width="100%" celpadding="0" cellspacing="0">
-<tr class="headingbg">
-
-<td colspan="2"><strong>Foreign Bank Account Reporting (FBAR) - 2019</strong></td> 
-</tr>
-
-<tr><td colspan="2"><p>If you have Transferred/Maintained $10,000 or more to any of your foreign bank account then, Please provide us the details below so that we can process your FBAR</p></td></tr>
-       		<tr><td>Did you transfer/Maintained $10,000 or more to foreign Account</td><td>
-			<input type="text" id="transferToForeignAccount" name="transferToForeignAccount" value="" />
-		</td></tr>
-			   <tr><td>A/c Belongs to</td>
-				<td><input type="text" id="accBelongsTo" name="accBelongsTo" value="" /></td></tr>
-       		<tr><td>Bank Name</td><td>
-				   <input type="text" id="bankName" name="bankName" value="" /></td></tr>
-       		<tr><td>Bank Address</td><td>
-				   <input type="text" id="bankAddress" name="bankAddress" value="" /></td></tr>
-       		<tr><td>City</td><td>
-				   <input type="text" id="city" name="city" value="" /></td></tr>
-       		<tr><td ><table celpadding="0" cellspacing="0" style="width: 100%;"><tr><td>State</td><td>
-				   <input type="text" id="state" name="state" value="" /></td><td>Pin code</td></tr>
-				</table></td><td>
-					<input type="text" id="pincode" name="pincode" value="" /></td></tr>
-       		
-       		<tr><td>Maximum value in the A/c (INR)</td><td>
-				   <input type="text" id="maximumValueInTheAcINR" name="maximumValueInTheAcINR" value="" /></td></tr>
-       		<tr><td>A/c No</td><td>
-				   <input type="text" id="accNo" name="accNo" value="" /></td></tr>
-       		<tr><td>Type of account</td><td>
-				   <input type="text" id="typeOfAccount" name="typeOfAccount" value="" /></td></tr>
-
-<td colspan="2"><strong>Note: If the aggregate of your Bank Accounts/Securities Accounts/Other Financial Accounts exceed $10,000 at any time during the tax year2019 then it’s mandatory to report.</strong></td>        		
-
-
-<tr><td colspan="2" style="padding: 20px;">
-       		<input type="hidden" name="fbar_info_id" value="" />
-       		<input type="hidden" name="user_id" value="1440" />
-			   <a href="javascript:fbrinfo()" type="submit" class="button" id="add">Add</a> &nbsp; <input id="cancel" type="submit" name="cancel" value="Cancel" class="button"> 
-					<!-- <a href="tax filing-other information.html"></a>	   -->
+		<form action=""method="post"  action="" name="fbarform" class="form" role="form"
+		enctype="multipart/form-data" novalidate="novalidate" id="fbarform" method="post">
+		
+		<table class="formtable" border="1" width="100%" celpadding="0" cellspacing="0">
+		<tr class="headingbg">
+		
+		<td colspan="2"><strong>Foreign Bank Account Reporting (FBAR) - 2019</strong></td> 
+		</tr>
+		
+		<tr><td colspan="2"><p>If you have Transferred/Maintained $10,000 or more to any of your foreign bank account then, Please provide us the details below so that we can process your FBAR</p></td></tr>
+					   <tr><td>Did you transfer/Maintained $10,000 or more to foreign Account</td><td>
+					<input type="text" id="transferToForeignAccount" name="transferToForeignAccount" value="" />
 				</td></tr>
-       		</table>
-     </form>
+					   <tr><td>A/c Belongs to</td>
+						<td><input type="text" id="accBelongsTo" name="accBelongsTo" value="" /></td></tr>
+					   <tr><td>Bank Name</td><td>
+						   <input type="text" id="bankName" name="bankName" value="" /></td></tr>
+					   <tr><td>Bank Address</td><td>
+						   <input type="text" id="bankAddress" name="bankAddress" value="" /></td></tr>
+					   <tr><td>City</td><td>
+						   <input type="text" id="city" name="city" value="" /></td></tr>
+					   <tr><td ><table celpadding="0" cellspacing="0" style="width: 100%;"><tr><td>State</td><td>
+						   <input type="text" id="state" name="state" value="" /></td><td>Pin code</td></tr>
+						</table></td><td>
+							<input type="text" id="pincode" name="pincode" value="" /></td></tr>
+					   
+					   <tr><td>Maximum value in the A/c (INR)</td><td>
+						   <input type="text" id="maximumValueInTheAcINR" name="maximumValueInTheAcINR" value="" /></td></tr>
+					   <tr><td>A/c No</td><td>
+						   <input type="text" id="accNo" name="accNo" value="" /></td></tr>
+					   <tr><td>Type of account</td><td>
+						   <input type="text" id="typeOfAccount" name="typeOfAccount" value="" /></td></tr>
+		
+		<td colspan="2"><strong>Note: If the aggregate of your Bank Accounts/Securities Accounts/Other Financial Accounts exceed $10,000 at any time during the tax year2019 then it’s mandatory to report.</strong></td>        		
+		
+		
+		<tr><td colspan="2" style="padding: 20px;">
+					   <input type="hidden" name="fbar_info_id" value="" />
+					   <input type="hidden" name="user_id" value="1440" />
+					   <a href="javascript:fbrinfo()" type="submit" class="button" id="add">Add</a> &nbsp; <input id="cancel" type="submit" name="cancel" value="Cancel" class="button"> 
+							<!-- <a href="tax filing-other information.html"></a>	   -->
+						</td></tr>
+					   </table>
+			 </form>
           
 </td></tr>
 </table>       		
@@ -633,15 +633,17 @@ s0.parentNode.insertBefore(s1,s0);
 <script>
 	function ajax(url, method, reqData){
 	try{
-		alert("inside ajax");
+		//alert("inside ajax");
 	 $.ajax({
              url :url,
              type:method,
 			 contentType: "application/json",
              data: reqData,
              success:function(data, textStatus, jqXHR ,response){
-               alert(sucess);
-				
+              alert("sucess");
+			   var delay = 500; 
+        	var url = 'tax filing-other information.html'
+        	setTimeout(function(){ window.location = url; }, delay);				
              },
              error:function(jqXHR, textStatus, errorThrown){
                  
@@ -666,13 +668,13 @@ function fbrinfodetails(){
 	fallingfbr.accNo = $('#accNo').val();
 	fallingfbr.typeOfAccount = $('#typeOfAccount').val();
         var fallingfbrObj = JSON.stringify(fallingfbr);
-		 alert("fallingfbrObj: "+fallingfbrObj);
-		 ajax("http://34.239.168.155:8080/taxfiler-0.0.1-SNAPSHOT/api/fbar", 'POST',fallingfbrObj);
+		// alert("fallingfbrObj: "+fallingfbrObj);
+		 ajax("http://34.239.168.155:8080/taxfiler-0.0.1-SNAPSHOT/api/updateuser/1/2019/fbar", 'PUT',fallingfbrObj);
 }
 
 function fbrinfo(){
 	$("#fbarform").submit();
-	alert("fubction");
+	//alert("fubction");
 }
 			
 $(document).ready(function(){
@@ -682,7 +684,7 @@ var validator = $("#fbarform").validate({
 			invalidHandler: function() {  },
                 submitHandler: function(form) { 
 					fbrinfodetails()
-					alert("submit");
+					//alert("submit");
                 }
                 
         });

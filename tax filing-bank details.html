@@ -463,47 +463,49 @@ var tpmenuId = "bankdetails";
      
 
 
-<form action="" method="post">
-<table border="1" width="100%">
-
-<thead>
-
-<tr style="background-color:#C2C9D3;font-weight: bold;">
-
-<td colspan="2">Bank Details</td>
-
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-
-<td>Bank Name:</td><td><input type="text" name="bank_name" value="" ></td></tr>
-<td>Routing Number (Electronic routing number):</td><td><input type="text" name="routing_no" value="" ></td></tr>
-
-<tr>
-<td>Bank Account Number:</td><td><input type="text" name="bank_acc_no" value="" ></td></tr>
-
-<tr>
-<td>Bank Account Type:</td><td>
-<select name="bank_acc_type" id="Account_Type" class="required">
-		  			<option value="">Please Select--</option>
-		 			<option value="Savings">Savings</option>
-		            <option value="Checking">Checking</option>
-		        </select>
-
-
-</td></tr>
-<tr><td>
-<input type="hidden" name="customer_id" value="457168">
-<input type="hidden" name="user_id" value="1440">
-<a href="tax filing-other income.html" class="button" id="saveNext">Save Next</a>
-</tbody>
-
-</table>
-</form>
+	  <form id="BankForm" method="post" action="" name="BankForm" class="form" role="form"
+	  enctype="multipart/form-data" novalidate="novalidate">
+	  <table border="1" width="100%">
+	  
+	  <thead>
+	  
+	  <tr style="background-color:#C2C9D3;font-weight: bold;">
+	  
+	  <td colspan="2">Bank Details</td>
+	  
+	  </tr>
+	  
+	  </thead>
+	  
+	  <tbody>
+	  
+	  <tr>
+	  
+	  <td>Bank Name:</td><td><input type="text" name="bankName" od="bankName" value="" ></td></tr>
+	  <td>Routing Number (Electronic routing number):</td><td><input type="text" name="routingNumber" id="routingNumber" value="" ></td></tr>
+	  
+	  <tr>
+	  <td>Bank Account Number:</td><td><input type="text" name="bankAccountNumber"  id="bankAccountNumber" value="" ></td></tr>
+	  
+	  <tr>
+	  <td>Bank Account Type:</td><td>
+	  <select name="bankAccountType" id="bankAccountType" class="required">
+		  <option value="">Please Select--</option>
+		  <option value="Savings">Savings</option>
+		  <option value="Checking">Checking</option>
+	  </select>
+	  
+	  
+	  </td></tr>
+	  <tr><td>
+	  <input type="hidden" name="customer_id" value="457168">
+	  <input type="hidden" name="user_id" value="1440">
+	  <a  class="button"  id="saveNext" href="javascript:submitBank()">Save Next</a>
+	  <!-- <a href="tax filing-other income.html"></a> -->
+	  </tbody>
+	  
+	  </table>
+	  </form>
 </div>
 
 	
@@ -567,17 +569,74 @@ s0.parentNode.insertBefore(s1,s0);
 <!-- End Footer -->
 <script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-30403568-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-30403568-1']);
+	_gaq.push(['_trackPageview']);
+  
+	(function() {
+	  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+  
+	function ajax(url, method, reqData){
+	  try{
+		  //alert("inside ajax");
+	   $.ajax({
+			   url :url,
+			   type:method,
+			   contentType: "application/json",
+			   data: reqData,
+			   success:function(data, textStatus, jqXHR ,response){
+				 alert("sucess");
+				 var delay = 500; 
+				  var url = 'tax filing-other income.html'
+				 setTimeout(function(){ window.location = url; }, delay);
+				  
+			   },
+			   error:function(jqXHR, textStatus, errorThrown){
+				   
+					 alert('something went wrong');
+			   }
+		   });
+	  }catch (ex) {
+		  alert('Error parsing response.'+ex);
+	  }
+  }
+  
+  function bankdetails(){
+	  var bankInfo = { };
+	  bankInfo.bankName = $('#bankName').val();
+	  bankInfo.routingNumber = $('#routingNumber').val();
+	  bankInfo.bankAccountNumber = $('#bankAccountNumber').val();
+	  bankInfo.bankAccountType = $('#bankAccountType').val();
+	  //alert(bankInfo);
+		  var bankInfoObj = JSON.stringify(bankInfo);
+		   //alert("bankInfoObj: "+bankInfoObj);
+		   ajax("http://34.239.168.155:8080/taxfiler-0.0.1-SNAPSHOT/api/updateuser/1/2019/bankInfo", 'PUT',bankInfoObj);
+  }
+  
+  function submitBank(){
+	  $("#BankForm").submit();
+	  
+  }
+			  
+  $(document).ready(function(){
+   $("#saveNext").click(function(e) { 	
+  var validator = $("#BankForm").validate({
+				 
+			  invalidHandler: function() {  },
+				  submitHandler: function(form) { 
+					  bankdetails()
+					  
+				  }
+				  
+		  });
+	  
+	  });
+	});
+  
+  </script>
 </body>
 
 <!-- Mirrored from themes.mudodesigns.com/adminbase/ by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 04 Jun 2010 19:45:05 GMT -->
