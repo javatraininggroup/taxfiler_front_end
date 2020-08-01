@@ -1492,6 +1492,8 @@ document.getElementById('logindiv').innerHTML='<iframe id="loginframe" src="" wi
                 // $('#msg').html(data).fadeIn('slow');
 				// $('#msg').html("Login successfully").fadeIn('slow') //also show a success message 
 				console.log("username: "+jqXHR.responseJSON.username+", id: "+jqXHR.responseJSON.id);
+				localStorage.setItem("username", jqXHR.responseJSON.username);
+				localStorage.setItem("id", jqXHR.responseJSON.id);
 				$('#msg').text('Login Successfully');
 				var delay = 1000; 
         		var url = 'homepage.html'
