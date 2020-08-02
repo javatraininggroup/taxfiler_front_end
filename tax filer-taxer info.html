@@ -621,38 +621,110 @@ var tpmenuId = "taxpayerinfo";
 										<option value="Head">Head of Household</option>
 										<option value="Widow">Widowed</option>
 									  </select>
+								</td></tr>
+											<tr><td>SSN</td><td colspan="5">
+												<input type="text" class="ssn" name="ssn" id="ssn" value="" />
+												<input type="text" class="ssn" name="ssn" id="ssn" value="" />
+												<input type="text" class="ssn" name="ssn" id="ssn" value="" />
+											</td></tr>
+										   <tr><td>First Name</td>
+											<td>
+												<input size="16" type="text" name="firstName" id="firstName" placeholder="First Name" value="" />
+											</td>
+											</tr> 
+											<tr><td>Middle Name</td>
+												<td>
+													<input size="12" type="text" placeholder="Middle Name" name="middleName" id="middleName" value="" />
+												</td>
+												</tr>
+											<tr>
+											<td>Last Name</td>
+											<td>
+												<input size="16" type="text" name="lastName" id="lastName" placeholder="Last Name" value="" />
+											</td>
+											</tr>
+											<tr>
+											<td>Date Of Birth</td>
+											<td>
+												<input type="text" id="dateOfBirth" placeholder="MM/DD/YYYY" name="dateOfBirth" value="" />
+											</td>
+											</tr>
+											<tr>
+											<td>Email Id</td>
+											<td>
+												<input placeholder="Primary Email" type="text" name="email" id="email" />
+											</td>
+											</tr>
+											<tr>
+											<td>Occupation</td>
+											<td>
+												<input type="text" name="occupation" id="occupation" value="" />
+											</td>
+											</tr>
+											<tr><td width="110px">Gender</td><td colspan="5">
+												<select name="Gender" id="Gender">
+													<option value="male" selected="">Male </option>
+													<option value="female">Female</option>
+													
+												  </select>
+											</td></tr>
+											<tr>
+												<td>Occupation</td>
+												<td>
+													<input type="text" name="occupation" id="occupation" value="" />
+												</td>
+												</tr>
+												<tr>
+												<td>Visa Type</td>
+												<td>
+													<input type="text" name="typeOfVisa" id="typeOfVisa" value="" />
+												</td>
+												</tr>
+												<tr>
+												<td>Citizenship</td>
+												<td>
+													<input type="text" name="citizenship" id="citizenship" value="" />
+												</td>
+												</tr>
+												<tr>
+												<td>First Date of Entry in US</td>
+												<td>
+													<input type="text" class="dp" name="firstDateOfEntyInUS" id="firstDateOfEntyInUS" value="" />
+												</td>
+												</tr>
+												<tr>
+												
+												<tr><td colspan="6"><b>Contact Details<b></b></td></tr>
+												<tr><td>Current Address</td><td colspan="5">
+												<input placeholder="Work No" type="text"  name="address" id="address" value="" />
+												<!-- <input type="text" placeholder="" name="city" id="city" value="" /> -->
+												<input placeholder="Mobile Phone" type="text" value="" id="mobilePhone" name="mobilePhone" />
+												<input type="text" placeholder="Residence No" name="aptNo" id="aptNo" value="" /></td></tr>
+												<tr><td>Malling Address</td><td colspan="5">
+												<input placeholder="Apartment" type="text"  name="Apartment" id="Apartment" value="" />
+												<input placeholder="Street" type="text" value="" id="Street" name="Street" />
+												</td></tr>
+												<tr><td></td><td colspan="5">
+													<input type="text" placeholder="City" name="city" id="city" value="" /> 
+													<input type="text" placeholder="State" name="state" id="state" value="" />
+													</td></tr>
+													<tr><td></td><td colspan="5">
+														<input type="text" placeholder="Zip/ PIN Code" name="zip" id="zip" value="" />
+														<input type="text" placeholder="Country" name="country" id="country" value="" />
+														</td></tr>
+												<!-- <tr><td></td><td colspan="5">
+													<input type="text" placeholder="State" name="state" id="state" value="" />
+													<input type="text" placeholder="Zip" name="zip" id="zip" value="" />
+													<input type="text" placeholder="Country" name="country" id="country" value="" /></td></tr>
+												<tr><td>Contact</td><td colspan="5">
+													<input placeholder="Mobile Phone" type="text" id="mobilePhone" name="mobilePhone" />
+													<input type="text" placeholder="Alternate Number" id="alternateNumber" name="alternateNumber" value="" />
+												<input type="text" placeholder="India Number" id="indiaNumber" name="indiaNumber" value="" />	
+												<input placeholder="Primary Email" type="text" name="email" id="email" /></td></tr> -->
+												<tr><td>Time Zone</td>
+												<td colspan="5"><select id="timeZone" name="timeZone">
+													<option value="">Select TimeZone</option><option value="America/New_York">EST</option><option value="America/Chicago">CST</option><option value="America/Phoenix">MST</option><option value="America/Los_Angeles">PST</option><option value="Asia/Calcutta">IST</option></select></td></tr>
 									
-									</td></tr>
-										   <tr><td>Name(As per SSN)</td><td colspan="5"><input size="16" type="text" placeholder="Last Name" name="lastName" id="lastName" value="" /><input size="12" type="text" placeholder="Middle Name" name="middleName" id="middleName" value="" /><input size="16" type="text" name="firstName" id="firstName" placeholder="First Name" value="" /></td></tr>
-										   <tr><td>SSN</td><td><input type="text" class="ssn" name="ssn" id="ssn" value="" /></td><td>Occupation</td><td colspan="3"><input type="text" name="occupation" id="occupation" value="" /></td></tr>       		
-										   <tr><td >Date Of Birth</td><td><input type="text" id="dateOfBirth" placeholder="MM/DD/YYYY" name="dateOfBirth" value="" /></td><td id="dt_marriage_lbl">Date of Marriage</td><td colspan="3">
-										<input type="text" class="dp" placeholder="MM/DD/YYYY" id="dateOfMarriage" name="dateOfMarriage" value="" /></td></tr>
-										   <tr><td>First Date of Entry in US</td><td>
-										<input type="text" class="dp" name="firstDateOfEntyInUS" id="firstDateOfEntyInUS" value="" /></td><td>Type of Visa</td>
-										<td colspan="3">
-										<input type="text" name="typeOfVisa" id="typeOfVisa" value="" /></td></tr>
-										   <tr><td colspan="2"></td>
-											<td>Citizenship</td><td colspan="3">
-										<input type="text" name="citizenship" id="citizenship" value="" /></td></tr>
-										   
-										   
-										   <tr><td colspan="6"><b>Contact Details<b></b></td></tr>
-										   <tr><td>Current Address</td><td colspan="5"><input placeholder="Address" type="text" name="address" id="address" value="NULL" />
-											<input type="text" placeholder="City" name="city" id="city" value="" />
-											<input type="text" placeholder="Apt No" name="aptNo" id="aptNo" value="" /></td></tr>
-										   <tr><td></td><td colspan="5">
-											   <input type="text" placeholder="State" name="state" id="state" value="" />
-											   <input type="text" placeholder="Zip" name="zip" id="zip" value="" />
-											   <input type="text" placeholder="Country" name="country" id="country" value="" /></td></tr>
-										   <tr><td>Contact</td><td colspan="5">
-											   <input placeholder="Mobile Phone" type="text" id="mobilePhone" name="mobilePhone" />
-											   <input type="text" placeholder="Alternate Number" id="alternateNumber" name="alternateNumber" value="" />
-										   <input type="text" placeholder="India Number" id="indiaNumber" name="indiaNumber" value="" />	
-										   <input placeholder="Primary Email" type="text" name="email" id="email" /></td></tr>
-										   <tr><td>Time Zone</td>
-											<td colspan="5"><select id="timeZone" name="timeZone">
-												<option value="">Select TimeZone</option><option value="America/New_York">EST</option><option value="America/Chicago">CST</option><option value="America/Phoenix">MST</option><option value="America/Los_Angeles">PST</option><option value="Asia/Calcutta">IST</option></select></td></tr>
-							
 										   <tr><td colspan="6"><b>Residency Details for States</b></td></tr>
 										   <tr><td colspan="6">
 										   
@@ -703,18 +775,58 @@ var tpmenuId = "taxpayerinfo";
 							</tr>
 							
 							</thead>
-							
-									<tbody>
-										<tr><td width="110px">Name</td><td colspan="5"><input placeholder="Last Name" type="text" name="sp_last_name" value="" /><input placeholder="Middle Name" type="text" name="sp_middle_name" value="" /><input placeholder="First Name" type="text" name="sp_first_name" value="" /></td></tr>
-										   <tr><td>Date Of Birth</td><td><input type="text" name="sp_dob" id="sp_dob" value="" /></td><td>SSN/ITIN</td><td colspan="3"><input type="text" class="ssn" name="sp_ssn_itin" value="" /></td></tr>
-										   <tr  id="sp_itinyears_tr"><td colspan="3">Have you used ITIN number in previous years tax return? please select</td>
-										   <td colspan="2">
-										   <table width="90%">
-									<tr>
-										<td>2018</td><td width="30%"><input type="checkbox" name="sp_itin_previous_years[]" value="2018"  /></td>
-										<td>2017</td><td width="30%"><input type="checkbox" name="sp_itin_previous_years[]" value="2017"  /></td><td>2016</td><td width="30%"><input type="checkbox" name="sp_itin_previous_years[]" value="2016"  /></td>
+							<tbody>
+								<!-- <tr>
+									<td width="110px">Spouse SSN / ITIN</td>
+									<td style="text-align: right;width: 150px">SSN</td><td ><input type="checkbox" name="sp_apply_itin"  value="1" /></td>
+									<td style="text-align: right;"> ITIN </td><td ><input type="checkbox" name="sp_itin_tobe_renewed"  value="1" /></td>
+									<td style="text-align: right;">Appliying ITIN </td><td ><input type="checkbox" name="sp_itin_renewed"  value="1" /></td>
+								</tr> -->
+								<tr>
+									<td colspan="6">
+									<table style="width: auto;"><tr><td>Spouse SSN / ITIN</td> 
+									 <td> <input type="radio" name="sp_worked_this_year" value="1" /></td>
+									 <td>SSN</td><td>
+										 <input type="radio" name="sp_worked_this_year" value="0" /></td>
+									 <td>ITIN</td>
+									 <td><input type="radio" name="sp_worked_this_year" value="0" /></td>
+									 <td>Appliying ITIN</td>
 									</tr>
-									</table>
+								</table></td></tr>
+								<tr>
+							<td width="110px">First Name</td><td colspan="5">
+								<input placeholder="First Name" type="text" name="sp_first_name" value="" />
+							</td></tr>
+							<tr>
+							<td width="110px">Middle Name</td><td colspan="5">
+								<input placeholder="Middle Name" type="text" name="sp_middle_name" value="" />
+							</td></tr>
+								<tr>
+								<td width="110px">Last Name</td><td colspan="5">
+									<input placeholder="Last Name" type="text" name="sp_last_name" value="" />
+								</td>
+							</tr>
+							<tr><td>Date Of Birth</td>
+								<td><input type="text" name="sp_dob" id="sp_dob" value="" />
+							</td></tr>
+							<tr><td>Date of Marriage </td>
+								<td><input type="text" id="dateOfBirth" placeholder="MM/DD/YYYY" name="dateOfBirth" value="" />
+							</td></tr>
+							<tr><td>Occupation</td><td colspan="5"><input type="text" name="sp_occupation" value="" /></td></tr>
+							<tr>
+								<td>Visa Type</td>
+								<td>
+									<input type="text" name="typeOfVisa" id="typeOfVisa" value="" />
+								</td>
+								</tr>
+							<tr  id="sp_itinyears_tr"><td colspan="3">Have you used ITIN number in previous years tax return? please select</td>
+							<td colspan="2">
+							<table width="90%">
+						<tr>
+							<td>2018</td><td width="30%"><input type="checkbox" name="sp_itin_previous_years[]" value="2018"  /></td>
+							<td>2017</td><td width="30%"><input type="checkbox" name="sp_itin_previous_years[]" value="2017"  /></td><td>2016</td><td width="30%"><input type="checkbox" name="sp_itin_previous_years[]" value="2016"  /></td>
+						</tr>
+						</table>
 									</td></tr>
 								<tr><td colspan="5">
 										   <table width="100%">
