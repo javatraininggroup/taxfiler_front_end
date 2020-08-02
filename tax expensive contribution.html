@@ -1,0 +1,729 @@
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+<head>
+
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href='https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+
+<link type="text/css" rel="stylesheet" media="all" href="css/jquery-ui.css" />
+
+<link type="text/css" rel="stylesheet" media="all" href="css/grid.css" />
+
+<link type="text/css" rel="stylesheet" media="all" href="css/visualize.css" />
+<link rel="stylesheet" href="css/jquery.wysiwyg.css" type="text/css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/jquery.qtip.min.css">
+
+<title>Best Tax filer User Dashboard</title>
+
+<script type="text/javascript" src="js/jquery.js" ></script>
+
+<script src="js/jquery.validate.js"></script>
+
+<script type="text/javascript" src="js/jquery-ui.min.js" ></script>
+
+<script type="text/javascript" src="js/excanvas.js"></script>
+
+<script type="text/javascript" src="js/visualize.jQuery.js"></script>
+
+<script type="text/javascript" src="js/functions.js"></script>
+
+<script src="js/jquery.validate.js"></script>    
+
+<script src="js/jquery.form.js"></script>
+<script src="js/jquery.qtip.min.js"></script>
+ <script>
+
+	$(document).ready(function(){
+	$("#username").text(localStorage.getItem("username"));		
+		
+		$(".selectyear").change(function(){
+    this.submit();
+});
+
+		
+		if($("#selectYear").val()==""){
+					$('.selectyear').qtip({
+				        content: 'Please select Tax Year',
+				        show: {
+				            when: false, // Don't specify a show event
+				            ready: true // Show the tooltip when ready
+				        },
+				        hide: false, // Don't specify a hide event
+				        style: {
+				            classes: 'ui-tooltip-btf'
+				         }
+				    });
+		}
+
+	$("#form1").validate();
+
+  });
+
+  </script>
+  
+  <script>
+	$(function() {
+		var minDate = -1;
+		var maxDate = new Date();
+		maxDate.setDate(maxDate.getDate() + 30);
+		
+		$( "#dob" ).datepicker({ maxDate: maxDate,changeMonth: true,
+	        changeYear: true,
+	        yearRange: "-50:-10" });
+	});
+	</script>
+  <script type="text/javascript" src="js/jquery.wysiwyg.js"></script>
+  <script type="text/javascript">
+  $(function()
+  {
+      $('#wysiwyg').wysiwyg();
+  });
+  </script>
+  
+  <script type="text/javascript">
+function show_confirm(url)
+{
+var r=confirm("Are you Sure");
+if (r==true)
+  {
+window.location.href="https://www.besttaxfiler.com/clients/upload-file.php?fid="+url+'';
+  }
+else
+  {
+ window.location.href="https://www.besttaxfiler.com/clients/upload-file.php";
+  }
+}
+</script>
+
+	<script>
+
+	
+	$(function() {
+		$( "#progressbar" ).progressbar({
+			
+			value: -17		});
+	});
+	</script>
+
+
+</head>
+
+<body>
+
+<div id="header">
+
+  <div class="header-top tr">
+
+			<div style="float: right; height: 20px;">
+				&nbsp;&nbsp;&nbsp; <span class="hello_txt">Hello <span id="username"
+					class="hello_name"></span></span> | <a href="logout.php">Logout</a>
+			</div>
+
+			<!-- start dialogue box -->
+
+			<!-- end dialogue box -->
+
+		</div>
+
+
+		<div class="header-middle">
+
+			<table border="0" cellpadding="0" cellspacing="0" class="noBorder"
+				width="100%">
+				<tr>
+					<td width="200px" style="padding: 0px; vertical-align: top;">
+						<a id="wLogoLink"
+						href="https://www.besttaxfiler.com/clients/index.php"><img
+							id="logo" src="img/updated_logo.png" alt="United Tax Filer"
+							border="0" /> </a> <!-- <a id="mLogoLink" style="display: none;" href="https://m.besttaxfiler.com/clients/index.php"><img id="logo" src="img/dummy.png" alt="Logo2" border="0"/> </a> -->
+
+						<!-- End Logo --> <br class="cl" />
+					</td>
+					<td style="vertical-align: top; padding: 0px;">
+						<div style="padding-left: 20px; padding-right: 20px;"
+							id="progressDiv">
+							<table width="100%" cellpadding="0" cellspacing="0" border="0">
+							</table>
+						</div>
+					</td> 
+		</tr>
+	</table>
+   	
+
+
+    <!-- Start Logo -->
+		</div>
+
+  <div class="header-bottom"> 
+
+    <!-- Start Breadcrumbs -->
+
+			
+			<link rel="stylesheet" type="text/css" media="all" href="css/menustyles.css">
+<nav style="background-color: #189a8d">
+<div style="display: inline;float: left;position: relative;margin: 10px 5px 5px 7px;">
+<form method="post" action="" name="formName" class="selectyear">
+
+       <label style="padding: 0;color: #fff">Tax Year</label>
+
+                <select id="selectYear" name="year" style="padding: 0">
+                	<option value="">Select Year</option><option value="2019" selected>2019</option><option value="2018" >2018</option><option value="2017" >2017</option>                </select>
+
+                </form>
+</div>
+				<div class="wrapper">
+				<ul id="menu" class="clearfix">
+					<li><a href="homepage.html" id="Mhome">Home</a></li>
+						<li><a href="tax filer-taxer info.html" id="Mtaxfiling">Tax Filing</a></li>
+						<li><a href="referral.html" id="Mreferral">Referrals</a></li>
+						<li><a href="message.html" id="Mmessages">Messages</a></li>
+						<li><a href="setting.html" id="Msettings">Settings</a></li>
+				</ul>
+				</div>
+				<div style="display: inline;float: right;position: relative;margin: 0px;width: 150px;top:-31px">
+										<a class="payment" href="pay.php">Make Payment</a>
+					
+										
+				</div>
+					
+				</div>
+			</nav>
+			
+
+			
+	<script type="text/javascript">
+		$(function(){
+			$("div.wrapper > a").removeClass("selectedNav");
+			$("a#"+menuId).addClass("selectedNav");
+			
+			$("div.sidemenu >ul").hide();
+			$("ul#"+menuId).show();
+
+			$("div.sidemenu >ul >li > a").removeClass("active");
+			$("a#"+sideMenuId).addClass("active");
+
+
+
+			
+		  $('a[href="#"]').on('click', function(e){
+		    e.preventDefault();
+		  });
+		  
+		  $('#menu > li').on('mouseover', function(e){
+		    $(this).find("ul:first").show();
+		    $(this).find('> a').addClass('active');
+		  }).on('mouseout', function(e){
+		    $(this).find("ul:first").hide();
+		    $(this).find('> a').removeClass('active');
+		  });
+		  
+		  $('#menu li li').on('mouseover',function(e){
+		    if($(this).has('ul').length) {
+		      $(this).parent().addClass('expanded');
+		    }
+		    $('ul:first',this).parent().find('> a').addClass('active');
+		    $('ul:first',this).show();
+		  }).on('mouseout',function(e){
+		    $(this).parent().removeClass('expanded');
+		    $('ul:first',this).parent().find('> a').removeClass('active');
+		    $('ul:first', this).hide();
+		  });
+		});
+</script>
+    <!-- End Breadcrumbs --> 
+
+  </div>
+
+</div><link type="text/css" href="css/jquery.ui.selectmenu.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery.ui.selectmenu.js"></script>
+<script type="text/javascript">
+var menuId = "Mtaxfiling"; 
+var sideMenuId ="SMpersonalinfo";
+</script> 
+<style type="text/css">
+.dp{
+	width: 90px;
+}
+tr td, thead th {
+
+	border-left:none !important;
+}
+
+</style>
+<script type="text/javascript">
+
+
+	$(function() {
+
+		var minDate = -1;
+		var maxDate = new Date();
+		maxDate.setDate(maxDate.getDate() + 30);
+		
+		$( "#dob" ).datepicker({
+			maxDate : maxDate,
+			changeMonth: true,
+	        changeYear: true,
+	        yearRange: "-80:-10"
+			});
+
+$( ".ans" ).each(function( index ) {
+		if($(this).attr("checked")=="checked" && $(this).val()==1){			
+			trid = $( this ).attr("id").replace("answer", "tr");
+			cmtid = $( this ).attr("id").replace("answer", "comment");
+			cmtspanid = $( this ).attr("id").replace("answer", "cmtspan");
+			cmtdoneid = $( this ).attr("id").replace("answer", "cmtdone");
+			
+			$( "#"+cmtid ).hide() ;
+			$( "#"+trid ).show() ;			
+			$( "#"+cmtspanid ).show() ;
+			$("#"+cmtdoneid).hide();
+			
+			  
+		}
+	});
+			
+
+$(".ans").click(function(i){
+
+	rid = i.currentTarget.id;
+	trid = rid.replace("answer", "tr");
+	cmtid = rid.replace("answer", "comment");
+	cmtspanid = rid.replace("answer", "cmtspan");
+	cmteditid = rid.replace("answer", "cmtedit");
+	cmtclearid = rid.replace("answer", "cmtclear");
+	cmtdoneid = rid.replace("answer", "cmtdone");
+
+	
+	
+	if(i.currentTarget.value=="1"){
+		if($("#"+trid).css("display")=="none"){
+			$("#"+cmtid).show();
+			$("#"+cmtdoneid).show();
+			$("#"+trid).show("slow");
+			$("#"+cmteditid).hide();
+			$("#"+cmtclearid).hide();
+		}
+
+	}else{
+		$("#"+cmtspanid).text("");
+		$("#"+cmtid).val("");
+		$("#"+trid).hide("slow");
+		
+		}
+});
+
+$(".ans").click(function(){	
+	if($(this).attr("id")=="answer_18" && $(this).val()==0){
+		alert("Please upload Last year Tax return Under Upload documents section");
+	}
+	});
+});
+
+	function editCmt(n){
+		$("#comment_"+n).show("slow");
+		$("#cmtedit_"+n).hide();
+		$("#cmtclear_"+n).hide();
+		$("#cmtspan_"+n).hide();
+		$("#cmtdone_"+n).show();
+	}
+
+	function doneCmt(n){
+		$("#cmtspan_"+n).text($("#comment_"+n).val());		
+		$("#comment_"+n).hide("slow");
+		$("#cmtedit_"+n).show();
+		$("#cmtclear_"+n).show();
+		$("#cmtspan_"+n).show();
+		$("#cmtdone_"+n).hide();
+	}
+
+	function clearCmt(n){
+		$("#cmtspan_"+n).text("");		
+		$("#comment_"+n).val("");
+		$("#cmtedit_"+n).show();
+		$("#cmtclear_"+n).hide();
+		$("#cmtspan_"+n).show();
+		$("#cmtdone_"+n).hide();
+	}
+
+
+		
+
+	//a custom format option callback
+		var addressFormatting = function(text, opt){
+			var newText = text;
+			//array of find replaces
+			var findreps = [
+				{find:/^([^\-]+) \- /g, rep: '<span class="ui-selectmenu-item-header">$1</span>'},
+				{find:/([^\|><]+) \| /g, rep: '<span class="ui-selectmenu-item-content">$1</span>'},
+				{find:/([^\|><\(\)]+) (\()/g, rep: '<span class="ui-selectmenu-item-content">$1</span>$2'},
+				{find:/([^\|><\(\)]+)$/g, rep: '<span class="ui-selectmenu-item-content">$1</span>'},
+				{find:/(\([^\|><]+\))$/g, rep: '<span class="ui-selectmenu-item-footer">$1</span>'}
+			];
+
+			for(var i in findreps){
+				newText = newText.replace(findreps[i].find, findreps[i].rep);
+			}
+			return newText;
+		}
+</script>
+ 
+<div id="page-wrapper">
+
+  <div class="page">
+
+    <!-- Start Sidebar -->
+
+   	  
+
+
+	<div class="sidemenu"> 
+
+		  <!-- Start Home -->
+		  
+	     <ul id="Mhome">
+			
+	      </ul>
+		  
+		  <!-- End Home -->
+		  
+		  
+		  <!-- Start Referal -->
+		  
+	     <ul id="Mreferral">
+	        <li><a id="SMaddreferral" href="refer.php" style="padding-right:2px;">Add Referrals</a></li>
+			<li><a id="SMmyreferral" class="active" href="my-referrals.php" style="padding-right:2px;">My Referrals</a></li>
+	      	<li><a id="SMreferralpaymentdetails" href="referral_payment_details.php">Referral Payment Details</a></li>   
+	      </ul>
+		  
+		  <!-- End Referal -->
+		  
+  
+		  <!-- Start Tax Filing  -->
+		  
+	     <ul id="Mtaxfiling">
+	     <style>
+	     	.smsub{
+	     		    color: #FFF !important;
+				    text-decoration: none;
+				    font-size: 14px;
+				    padding: 5px 0 5px 5px !important;
+				    width: 218px !important;
+				    background-color: ##72B6EA;
+					border-left: 4px white solid;
+	     	
+	     	}
+	     
+	     </style>
+	         	     
+					  <li><a id="SMpersonalinfo" href="tax filer-taxer info.html">Personal Info</a></li>
+					  <li><a id="SMuploadfiles" href="tax filing-upload files.html">Upload Files</a></li>
+					  <li><a id="SMmytaxsummary" href="tax filing-my tax summary.html">My Tax Summary</a></li>        
+					  <li><a id="SMmakepayment" href="tax filing-make payment.html">Make Payment</a></li>
+		        	      </ul>
+		  
+		  <!-- End Tax Filing  -->
+		  <!-- Start Messages -->
+		  
+	     <ul id="Mmessages">
+				<li><a id="SMinbox" href="list-messages.php">Inbox(0)</a></li>
+   		 	    <li><a id="SMcompose" href="new-message.php">Compose</a></li>
+		        <li><a id="SMsentitems" href="sent-items.php">Sent Items</a></li> 
+	      </ul>
+		  
+		  <!-- End Messages -->
+
+		  <!-- Start Settings -->
+		  
+	     <ul id="Msettings">
+			    <li><a id="SMeditprofile" href="edit-profile.php">Edit Profile</a></li>
+		        <li><a id="SMchangepassword" href="change-password.php">Change Password</a></li>
+		           
+	      </ul>
+		  
+		  <!-- End Settings -->
+
+    </div>
+
+    
+
+    
+    <!-- End Sidebar  -->
+
+
+
+    <!-- Star Page Content  -->
+
+    <div id="page-content">
+
+
+
+      <!-- Start Page Header -->
+
+      <!-- End Page Header -->
+
+
+
+      <!-- Start Grid -->
+
+      <div class="container_12">
+
+
+
+        <!-- Start Web Stats -->
+	
+		
+	
+
+        <!-- Start Forms -->
+
+        <div class="grid_7">
+
+<script type="text/javascript">
+var tpmenuId = "additionalinfo"; 
+</script>
+<style>
+
+.container_12 .grid_7 {
+    width: 90% !important;
+}
+</style>
+     <div id="page-header">        
+		<div id="menu_sevice">
+		<table border="0" style="width: auto;">
+		<thead>
+			<tr>
+<td><a id="taxpayerinfo"
+			href="tax filer-taxer info.html" class="inactive_menu fpe1">Personal Info
+				</a></td>
+		<td><a id="dependentinfo" class="inactive_menu fpe2"
+			href="dependents-info.html">Dependent Information</a></td>
+		<td><a id="otherincomeinfo" class="inactive_menu fpe4"
+			href="tax filing-other income.html">Other Income Info</a></td>
+				<!--  added below new menu -->
+		<td><a id="expense" class="inactive_menu fpe4"
+			href="tax expensive contribution.html">Expenses&Contribution</a></td>
+		<td><a id="additionalinfo" class="inactive_menu fpe4"
+			href="tax filing-additional info.html">Additional
+				Income</a></td>
+		<td><a id="bankdetails" class="inactive_menu fpe4"
+			href="tax filing-bank details.html">BankDetails</a></td>
+		<td><a id="fbarinfo" class="inactive_menu fpe4"
+			href="fbar-info.html">FBAR</a></td>
+		<td><a id="otherinfo" class="inactive_menu fpe4"
+			href="tax filing-other information.html">Other
+				Information</a></td>
+			</tr>
+		</thead>
+		</table>	
+		</div>
+		 <script type="text/javascript">
+	jQuery(function(){
+		$("div#menu_sevice > table > tr > td > a ").removeClass("active_menu");
+		$("div#menu_sevice > table > tr > td > a ").addClass("inactive_menu");
+		$("a#"+tpmenuId).removeClass("inactive_menu");
+		$("a#"+tpmenuId).addClass("active_menu");
+	});
+	$('#saveNext').on('click', function(e){
+		$("div#menu_sevice > table > tr > td > a#expense").removeClass("active_menu");
+		$("div#menu_sevice > table > tr > td > a#additionalinfo").addClass("inactive_menu");
+		  
+	});
+	</script>
+      </div>
+     
+ <table border="1" width="100%" celpadding="0" cellspacing="0">
+<tr>
+<td>
+<table border="1" width="100%" celpadding="0" cellspacing="0">
+
+<tr> <td>
+<span style="color: #026CA5">Any amounts paid for healthcare insurance and to doctors, dentists, hospitals</span>
+
+<form action="" id="additionalform" method="post">
+
+<table border="1" width="100%" celpadding="0" cellspacing="0">
+<tr style="background-color:#026CA5;font-weight: bold;color: #fff">
+
+<td colspan="6"><strong>Expenses</strong></td> 
+</tr>
+
+       		<tr style="background-color: "><td colspan="5">1. Did you make any charitable contributions? If yes, please give details.<input type="hidden" name="question_0" value="Do you have any medical expenses? If yes, please give details."><input type="hidden" name="additional_info_id_0" value="" /></td><td> <table border="0"celpadding="0" cellspacing="0"><tr><td width="25px"><input type="radio" index="0" id="answer_0" name="answer_0" value="1"  class="ans"  /></td><td width="40px">Yes</td><td width="20px"><input type="radio" class="ans" id="answer_0" name="answer_0" value="0"  /></td><td>No</td></tr></table></td></tr>
+       		
+       		<tr style="display: none;background-color: " id="tr_0"><td colspan="6" style="padding: 0 !important"> <table border="0" celpadding="0" cellspacing="0"><tr><td style="width: 60px;padding-top: 0 !important">Comment:</td><td style="padding: 0" colspan="6"><textarea id="comment_0" name="comment_0" cols="70" rows="2"></textarea> <span id="cmtspan_0" style="color: #026CA5"></span>
+       		&nbsp;&nbsp;<a id="cmtedit_0" href="javascript:editCmt('0')" class="cmtcls">Edit</a>&nbsp;&nbsp;<a id="cmtclear_0" href="javascript:clearCmt('0')" class="cmtcls">Clear</a>&nbsp;&nbsp;<a id="cmtdone_0" href="javascript:doneCmt('0')" class="cmtcls">Done</a></td></tr></table></td></tr>
+       		<tr style="background-color: #d9eaf7"><td colspan="5">2. Do you have a Home Mortgage Interest in US or India? If yes, please give details.<input type="hidden" name="question_1" value="Do you have a Home Mortgage Interest in US or India? If yes, please give details."><input type="hidden" name="additional_info_id_1" value="" /></td><td> <table border="0"celpadding="0" cellspacing="0"><tr><td width="25px"><input type="radio" index="1" id="answer_1" name="answer_1" value="1"  class="ans"  /></td><td width="40px">Yes</td><td width="20px"><input type="radio" class="ans" id="answer_1" name="answer_1" value="0"  /></td><td>No</td></tr></table></td></tr>
+       		
+       		<tr style="display: none;background-color: #d9eaf7" id="tr_1"><td colspan="6" style="padding: 0 !important"> <table border="0" celpadding="0" cellspacing="0"><tr><td style="width: 60px;padding-top: 0 !important">Comment:</td><td style="padding: 0" colspan="6"><textarea id="comment_1" name="comment_1" cols="70" rows="2"></textarea> <span id="cmtspan_1" style="color: #026CA5"></span>
+       		&nbsp;&nbsp;<a id="cmtedit_1" href="javascript:editCmt('1')" class="cmtcls">Edit</a>&nbsp;&nbsp;<a id="cmtclear_1" href="javascript:clearCmt('1')" class="cmtcls">Clear</a>&nbsp;&nbsp;<a id="cmtdone_1" href="javascript:doneCmt('1')" class="cmtcls">Done</a></td></tr></table></td></tr>
+       		<tr style="background-color: "><td colspan="5">3. Any casualty or theft losses? If yes, please give details<input type="hidden" name="question_2" value="Did you make any charitable contributions? If yes, please give details."><input type="hidden" name="additional_info_id_2" value="" /></td><td> <table border="0"celpadding="0" cellspacing="0"><tr><td width="25px"><input type="radio" index="2" id="answer_2" name="answer_2" value="1"  class="ans"  /></td><td width="40px">Yes</td><td width="20px"><input type="radio" class="ans" id="answer_2" name="answer_2" value="0"  /></td><td>No</td></tr></table></td></tr>
+       		
+       		<tr style="display: none;background-color: " id="tr_2"><td colspan="6" style="padding: 0 !important"> <table border="0" celpadding="0" cellspacing="0"><tr><td style="width: 60px;padding-top: 0 !important">Comment:</td><td style="padding: 0" colspan="6"><textarea id="comment_2" name="comment_2" cols="70" rows="2"></textarea> <span id="cmtspan_2" style="color: #026CA5"></span>
+       		&nbsp;&nbsp;<a id="cmtedit_2" href="javascript:editCmt('2')" class="cmtcls">Edit</a>&nbsp;&nbsp;<a id="cmtclear_2" href="javascript:clearCmt('2')" class="cmtcls">Clear</a>&nbsp;&nbsp;<a id="cmtdone_2" href="javascript:doneCmt('2')" class="cmtcls">Done</a></td></tr></table></td></tr>
+       		<tr style="background-color: #d9eaf7"><td colspan="5">4. Have you paid alimony in 2019? If yes please specify the amount<input type="hidden" name="question_3" value="Any casualty or theft losses? If yes, please give details"><input type="hidden" name="additional_info_id_3" value="" /></td><td> <table border="0"celpadding="0" cellspacing="0"><tr><td width="25px"><input type="radio" index="3" id="answer_3" name="answer_3" value="1"  class="ans"  /></td><td width="40px">Yes</td><td width="20px"><input type="radio" class="ans" id="answer_3" name="answer_3" value="0"  /></td><td>No</td></tr></table></td></tr>
+       		
+       		<tr style="display: none;background-color: #d9eaf7" id="tr_3"><td colspan="6" style="padding: 0 !important"> <table border="0" celpadding="0" cellspacing="0"><tr><td style="width: 60px;padding-top: 0 !important">Comment:</td><td style="padding: 0" colspan="6"><textarea id="comment_3" name="comment_3" cols="70" rows="2"></textarea> <span id="cmtspan_3" style="color: #026CA5"></span>
+       		&nbsp;&nbsp;<a id="cmtedit_3" href="javascript:editCmt('3')" class="cmtcls">Edit</a>&nbsp;&nbsp;<a id="cmtclear_3" href="javascript:clearCmt('3')" class="cmtcls">Clear</a>&nbsp;&nbsp;<a id="cmtdone_3" href="javascript:doneCmt('3')" class="cmtcls">Done</a></td></tr></table></td></tr>
+       		<tr style="background-color: "><td colspan="5">5. Did you itemize your returns last year? if yes please provide state refund.<input type="hidden" name="question_4" value="Do you make any additional contributions to H.S.A/I.R.A apart from w2?"><input type="hidden" name="additional_info_id_4" value="" /></td><td> <table border="0"celpadding="0" cellspacing="0"><tr><td width="25px"><input type="radio" index="4" id="answer_4" name="answer_4" value="1"  class="ans"  /></td><td width="40px">Yes</td><td width="20px"><input type="radio" class="ans" id="answer_4" name="answer_4" value="0"  /></td><td>No</td></tr></table></td></tr>
+       		
+       		<tr style="display: none;background-color: " id="tr_4"><td colspan="6" style="padding: 0 !important"> <table border="0" celpadding="0" cellspacing="0"><tr><td style="width: 60px;padding-top: 0 !important">Comment:</td><td style="padding: 0" colspan="6"><textarea id="comment_4" name="comment_4" cols="70" rows="2"></textarea> <span id="cmtspan_4" style="color: #026CA5"></span>
+       		&nbsp;&nbsp;<a id="cmtedit_4" href="javascript:editCmt('4')" class="cmtcls">Edit</a>&nbsp;&nbsp;<a id="cmtclear_4" href="javascript:clearCmt('4')" class="cmtcls">Clear</a>&nbsp;&nbsp;<a id="cmtdone_4" href="javascript:doneCmt('4')" class="cmtcls">Done</a></td></tr></table></td></tr>
+       		<tr style="background-color: #d9eaf7"><td colspan="5">6. Did you pay any Sales and Excise taxes on vehicle bought in 2019. If yes please upload bills.<input type="hidden" name="question_5" value="Do you have student loan? If yes, please upload document 1098E."><input type="hidden" name="additional_info_id_5" value="" /></td><td> <table border="0"celpadding="0" cellspacing="0"><tr><td width="25px"><input type="radio" index="5" id="answer_5" name="answer_5" value="1"  class="ans"  /></td><td width="40px">Yes</td><td width="20px"><input type="radio" class="ans" id="answer_5" name="answer_5" value="0"  /></td><td>No</td></tr></table></td></tr>
+       		
+   		
+       		<tr style="display: none;background-color: #d9eaf7" id="tr_21"><td colspan="6" style="padding: 0 !important"> <table border="0" celpadding="0" cellspacing="0"><tr><td style="width: 60px;padding-top: 0 !important">Comment:</td><td style="padding: 0" colspan="6"><textarea id="comment_21" name="comment_21" cols="70" rows="2"></textarea> <span id="cmtspan_21" style="color: #026CA5"></span>
+       		&nbsp;&nbsp;<a id="cmtedit_21" href="javascript:editCmt('21')" class="cmtcls">Edit</a>&nbsp;&nbsp;<a id="cmtclear_21" href="javascript:clearCmt('21')" class="cmtcls">Clear</a>&nbsp;&nbsp;<a id="cmtdone_21" href="javascript:doneCmt('21')" class="cmtcls">Done</a></td></tr></table></td></tr>
+	<tr ><td colspan="6">&nbsp;</td></tr>
+	<tr style="background-color:#026CA5;font-weight: bold;color: #fff"><td colspan="6" style="font-weight: bold;">Contributions</td></trstyle="background-color:#026CA5;font-weight: bold;color: #fff">
+	
+	
+	    <tr style="background-color: "><td colspan="5">1. Do you make any additional contributions to H.S.A/ Apart from you we?<input type="hidden" name="question_23" value="If you are resident of MA State? Provide Per month rent you are paying."><input type="hidden" name="additional_info_id_23" value="" /></td><td> <table border="0"celpadding="0" cellspacing="0"><tr><td width="25px"><input type="radio" index="23" id="answer_23" name="answer_23" value="1"  class="ans"  /></td><td width="40px">Yes</td><td width="20px"><input type="radio" class="ans" id="answer_23" name="answer_23" value="0"  /></td><td>No</td></tr></table></td></tr>
+       		
+       		<tr style="display: none;background-color: " id="tr_23"><td colspan="6" style="padding: 0 !important"> <table border="0" celpadding="0" cellspacing="0"><tr><td style="width: 60px;padding-top: 0 !important">Comment:</td><td style="padding: 0" colspan="6"><textarea id="comment_23" name="comment_23" cols="70" rows="2"></textarea> <span id="cmtspan_23" style="color: #026CA5"></span>
+       		&nbsp;&nbsp;<a id="cmtedit_23" href="javascript:editCmt('23')" class="cmtcls">Edit</a>&nbsp;&nbsp;<a id="cmtclear_23" href="javascript:clearCmt('23')" class="cmtcls">Clear</a>&nbsp;&nbsp;<a id="cmtdone_23" href="javascript:doneCmt('23')" class="cmtcls">Done</a></td></tr></table></td></tr>
+       		<tr style="background-color: #d9eaf7"><td colspan="5">2. Do you make any additional contributions to I.R.A/401k plan Apart from you we?<input type="hidden" name="question_24" value="If you are resident of MA State? Are you and your family covered with MA health insurance? If yes, mention the no. of months covered."><input type="hidden" name="additional_info_id_24" value="" /></td><td> <table border="0"celpadding="0" cellspacing="0"><tr><td width="25px"><input type="radio" index="24" id="answer_24" name="answer_24" value="1"  class="ans"  /></td><td width="40px">Yes</td><td width="20px"><input type="radio" class="ans" id="answer_24" name="answer_24" value="0"  /></td><td>No</td></tr></table></td></tr>
+       		
+       		<tr style="display: none;background-color: #d9eaf7" id="tr_24"><td colspan="6" style="padding: 0 !important"> <table border="0" celpadding="0" cellspacing="0"><tr><td style="width: 60px;padding-top: 0 !important">Comment:</td><td style="padding: 0" colspan="6"><textarea id="comment_24" name="comment_24" cols="70" rows="2"></textarea> <span id="cmtspan_24" style="color: #026CA5"></span>
+       		&nbsp;&nbsp;<a id="cmtedit_24" href="javascript:editCmt('24')" class="cmtcls">Edit</a>&nbsp;&nbsp;<a id="cmtclear_24" href="javascript:clearCmt('24')" class="cmtcls">Clear</a>&nbsp;&nbsp;<a id="cmtdone_24" href="javascript:doneCmt('24')" class="cmtcls">Done</a></td></tr></table></td></tr>
+       		<tr style="background-color: "><td colspan="5">3.Do you have student loan? If yes, please upload document 1098E<input type="hidden" name="question_25" value="If you are resident of NJ State? Provide Per month rent you are paying."><input type="hidden" name="additional_info_id_25" value="" /></td><td> <table border="0"celpadding="0" cellspacing="0"><tr><td width="25px"><input type="radio" index="25" id="answer_25" name="answer_25" value="1"  class="ans"  /></td><td width="40px">Yes</td><td width="20px"><input type="radio" class="ans" id="answer_25" name="answer_25" value="0"  /></td><td>No</td></tr></table></td></tr>
+       		
+       		<tr style="display: none;background-color: " id="tr_25"><td colspan="6" style="padding: 0 !important"> <table border="0" celpadding="0" cellspacing="0"><tr><td style="width: 60px;padding-top: 0 !important">Comment:</td><td style="padding: 0" colspan="6"><textarea id="comment_25" name="comment_25" cols="70" rows="2"></textarea> <span id="cmtspan_25" style="color: #026CA5"></span>
+       		&nbsp;&nbsp;<a id="cmtedit_25" href="javascript:editCmt('25')" class="cmtcls">Edit</a>&nbsp;&nbsp;<a id="cmtclear_25" href="javascript:clearCmt('25')" class="cmtcls">Clear</a>&nbsp;&nbsp;<a id="cmtdone_25" href="javascript:doneCmt('25')" class="cmtcls">Done</a></td></tr></table></td></tr>
+       		<tr style="background-color: #d9eaf7"><td colspan="5">4. Did you pay any tuition fee for self, spouse or dependents? If yes, please upload document 1098T.<input type="hidden" name="question_26" value="If you are resident of IN State? Provide Per month rent you are paying."><input type="hidden" name="additional_info_id_26" value="" /></td><td> <table border="0"celpadding="0" cellspacing="0"><tr><td width="25px"><input type="radio" index="26" id="answer_26" name="answer_26" value="1"  class="ans"  /></td><td width="40px">Yes</td><td width="20px"><input type="radio" class="ans" id="answer_26" name="answer_26" value="0"  /></td><td>No</td></tr></table></td></tr>
+       		
+       		<tr style="display: none;background-color: #d9eaf7" id="tr_26"><td colspan="6" style="padding: 0 !important"> <table border="0" celpadding="0" cellspacing="0"><tr><td style="width: 60px;padding-top: 0 !important">Comment:</td><td style="padding: 0" colspan="6"><textarea id="comment_26" name="comment_26" cols="70" rows="2"></textarea> <span id="cmtspan_26" style="color: #026CA5"></span>
+       		&nbsp;&nbsp;<a id="cmtedit_26" href="javascript:editCmt('26')" class="cmtcls">Edit</a>&nbsp;&nbsp;<a id="cmtclear_26" href="javascript:clearCmt('26')" class="cmtcls">Clear</a>&nbsp;&nbsp;<a id="cmtdone_26" href="javascript:doneCmt('26')" class="cmtcls">Done</a></td></tr></table></td></tr>
+       		<tr style="background-color: "><td colspan="5">5.  Did you pay any tuition fee for self, spouse or dependents? If yes, please upload document 1098T.<input type="hidden" name="question_27" value="If you are resident of WI State? Provide Per month rent you are paying."><input type="hidden" name="additional_info_id_27" value="" /></td><td> <table border="0"celpadding="0" cellspacing="0"><tr><td width="25px"><input type="radio" index="27" id="answer_27" name="answer_27" value="1"  class="ans"  /></td><td width="40px">Yes</td><td width="20px"><input type="radio" class="ans" id="answer_27" name="answer_27" value="0"  /></td><td>No</td></tr></table></td></tr>
+       		
+       		
+       		<tr style="display: none;background-color: " id="tr_27"><td colspan="6" style="padding: 0 !important"> <table border="0" celpadding="0" cellspacing="0"><tr><td style="width: 60px;padding-top: 0 !important">Comment:</td><td style="padding: 0" colspan="6"><textarea id="comment_27" name="comment_27" cols="70" rows="2"></textarea> <span id="cmtspan_27" style="color: #026CA5"></span>
+       		&nbsp;&nbsp;<a id="cmtedit_27" href="javascript:editCmt('27')" class="cmtcls">Edit</a>&nbsp;&nbsp;<a id="cmtclear_27" href="javascript:clearCmt('27')" class="cmtcls">Clear</a>&nbsp;&nbsp;<a id="cmtdone_27" href="javascript:doneCmt('27')" class="cmtcls">Done</a></td></tr></table></td></tr>
+       		<tr style="background-color: #d9eaf7"><td colspan="5">6. Is your health insurance covered from employer or market place.?.<input type="hidden" name="question_28" value="If you are paid any education saving plan (529 plan). If yes please provide the document"><input type="hidden" name="additional_info_id_28" value="" /></td><td> <table border="0"celpadding="0" cellspacing="0"><tr><td width="25px"><input type="radio" index="28" id="answer_28" name="answer_28" value="1"  class="ans"  /></td><td width="40px">Yes</td><td width="20px"><input type="radio" class="ans" id="answer_28" name="answer_28" value="0"  /></td><td>No</td></tr></table></td></tr>
+       		
+       		<tr style="display: none;background-color: #d9eaf7" id="tr_28"><td colspan="6" style="padding: 0 !important"> <table border="0" celpadding="0" cellspacing="0"><tr><td style="width: 60px;padding-top: 0 !important">Comment:</td><td style="padding: 0" colspan="6"><textarea id="comment_28" name="comment_28" cols="70" rows="2"></textarea> <span id="cmtspan_28" style="color: #026CA5"></span>
+       		&nbsp;&nbsp;<a id="cmtedit_28" href="javascript:editCmt('28')" class="cmtcls">Edit</a>&nbsp;&nbsp;<a id="cmtclear_28" href="javascript:clearCmt('28')" class="cmtcls">Clear</a>&nbsp;&nbsp;<a id="cmtdone_28" href="javascript:doneCmt('28')" class="cmtcls">Done</a></td></tr></table></td></tr>
+       		<tr style="background-color: "><td colspan="5">7.Form 1095-A if you enrolled in an insurance plan through the Marketplace<input type="hidden" name="question_29" value="Did you file for Iowa and Oregon last year (2018)? If yes upload the whole Tax Returns."><input type="hidden" name="additional_info_id_29" value="" /></td><td> <table border="0"celpadding="0" cellspacing="0"><tr><td width="25px"><input type="radio" index="29" id="answer_29" name="answer_29" value="1"  class="ans"  /></td><td width="40px">Yes</td><td width="20px"><input type="radio" class="ans" id="answer_29" name="answer_29" value="0"  /></td><td>No</td></tr></table></td></tr>
+       		
+       		<tr style="display: none;background-color: " id="tr_29"><td colspan="6" style="padding: 0 !important"> <table border="0" celpadding="0" cellspacing="0"><tr><td style="width: 60px;padding-top: 0 !important">Comment:</td><td style="padding: 0" colspan="6"><textarea id="comment_29" name="comment_29" cols="70" rows="2"></textarea> <span id="cmtspan_29" style="color: #026CA5"></span>
+			   &nbsp;&nbsp;<a id="cmtedit_29" href="javascript:editCmt('29')" class="cmtcls">Edit</a>&nbsp;&nbsp;<a id="cmtclear_29" href="javascript:clearCmt('29')" class="cmtcls">Clear</a>&nbsp;&nbsp;
+			   <a id="cmtdone_29" href="javascript:doneCmt('29')" class="cmtcls">Done</a></td></tr></table></td></tr>
+       		<tr style="background-color: #d9eaf7"><td colspan="5">8. Did you purchase any energy saving product in USA? If yes please specify it..<input type="hidden" name="question_30" value="If you are resident of OH & PA for 2019? If yes please provide your Home and Work address."><input type="hidden" name="additional_info_id_30" value="" /></td><td> <table border="0"celpadding="0" cellspacing="0"><tr><td width="25px"><input type="radio" index="30" id="answer_30" name="answer_30" value="1"  class="ans"  /></td><td width="40px">Yes</td><td width="20px"><input type="radio" class="ans" id="answer_30" name="answer_30" value="0"  /></td><td>No</td></tr></table></td></tr>
+       		
+			   <tr style="display: none;background-color: " id="tr_30"><td colspan="6" style="padding: 0 !important"> <table border="0" celpadding="0" cellspacing="0"><tr><td style="width: 60px;padding-top: 0 !important">Comment:</td><td style="padding: 0" colspan="6"><textarea id="comment_30" name="comment_30" cols="70" rows="2"></textarea> <span id="cmtspan_30" style="color: #026CA5"></span>
+				&nbsp;&nbsp;<a id="cmtedit_30" href="javascript:editCmt('30')" class="cmtcls">Edit</a>&nbsp;&nbsp;<a id="cmtclear_30" href="javascript:clearCmt('30')" class="cmtcls">Clear</a>&nbsp;&nbsp;
+				<a id="cmtdone_30" href="javascript:doneCmt('30')" class="cmtcls">Done</a></td></tr></table></td></tr>
+				<tr style="background-color: #d9eaf7"><td colspan="5">9. Have you purchased any Hybrid motor Vehicle in the TY 2019?.<input type="hidden" name="question_30" value="If you are resident of OH & PA for 2019? If yes please provide your Home and Work address."><input type="hidden" name="additional_info_id_30" value="" /></td><td> <table border="0"celpadding="0" cellspacing="0"><tr><td width="25px"><input type="radio" index="30" id="answer_30" name="answer_30" value="1"  class="ans"  /></td><td width="40px">Yes</td><td width="20px"><input type="radio" class="ans" id="answer_30" name="answer_30" value="0"  /></td><td>No</td></tr></table></td></tr>
+				
+			
+
+<tr><td colspan="2" style="padding: 20px;">
+       		
+       		<input type="hidden" name="user_id" value="1440" /><br><br>
+       		<a href="fbar-info.html" class="button" id="saveNext">Save Next</a>
+       		</td></tr>
+
+
+       		</table>
+     </form>
+</td></tr>
+
+     
+</td></tr>
+</table>       		
+</td>
+</tr>
+<tr><td>
+
+ </td></tr>
+</table>   
+	</div>
+
+	
+	<!--  Tax Summary Table New End -->
+        </div>
+
+
+        <!-- Start Forms -->
+
+        <!-- Start Notifcations -->
+
+        
+
+        <br class="cl" />
+
+        <!-- End Notifcations -->
+
+                <!-- Start Layout Example -->
+
+        
+
+        <br class="cl" />
+
+        <!-- End Layout Example -->
+
+
+
+        <!-- End Grid -->
+
+      </div>
+
+      <!-- End Page Wrapper -->
+
+    </div>
+
+    <!-- End Page Content  -->
+
+  </div>
+
+
+<div class="footer"><p style=text-align:center>&copy; Copyright 2009-2018 Best Tax Filer. All Rights Reserved.</p></div>
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5a78121b4b401e45400cabfc/1c5m4nmds';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+
+
+
+<!-- End Footer -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30403568-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+
+<!-- Mirrored from themes.mudodesigns.com/adminbase/ by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 04 Jun 2010 19:45:05 GMT -->
+</html>

@@ -512,7 +512,7 @@ var tpmenuId = "otherincomeinfo";
 												href="tax filing-other income.html">Other Income Info</a></td>
 													<!--  added below new menu -->
 											<td><a id="expense" class="inactive_menu fpe4"
-												href="tax filing-bank details.html">Expenses&Contribution</a></td>
+												href="tax expensive contribution.html">Expenses&Contribution</a></td>
 											<td><a id="additionalinfo" class="inactive_menu fpe4"
 												href="tax filing-additional info.html">Additional
 													Income</a></td>
@@ -536,7 +536,7 @@ var tpmenuId = "otherincomeinfo";
 	});
 	$('#saveNext').on('click', function(e){
 		$("div#menu_sevice > table > tr > td > a#otherincomeinfo").removeClass("active_menu");
-		$("div#menu_sevice > table > tr > td > a#additionalinfo").addClass("inactive_menu");
+		$("div#menu_sevice > table > tr > td > a#expense").addClass("inactive_menu");
 		  
 	});
 	</script>
@@ -666,8 +666,8 @@ and upload required documents under “Upload Files” tab.</span>
 <tr><td colspan="2" style="padding: 20px;">
        		
        		<input type="hidden" name="user_id" value="1440" /><br><br>
-			   <a  class="button"  type="submit" href="javascript:otherincome()" id="saveNext">Save Next</a>
-			   <!-- <a href="tax filing-additional info.html"></a> -->
+			   <!-- <a  class="button"  type="submit" href="javascript:otherincome()" id="saveNext">Save Next</a> -->
+			   <a class="button"  type="submit" href="tax expensive contribution.html" id="saveNext">Save Next</a>
        		</td></tr>
 
 

@@ -521,25 +521,25 @@ tr td, thead th {
 		<thead>
 			<tr>
 			<td><a id="taxpayerinfo"
-												href="tax filer-taxer info.html" class="inactive_menu fpe1">Personal Info
-													</a></td>
-											<td><a id="dependentinfo" class="inactive_menu fpe2"
-												href="dependents-info.html">Dependent Information</a></td>
-											<td><a id="otherincomeinfo" class="inactive_menu fpe4"
-												href="tax filing-other income.html">Other Income Info</a></td>
-													<!--  added below new menu -->
-											<td><a id="expense" class="inactive_menu fpe4"
-												href="tax filing-bank details.html">Expenses&Contribution</a></td>
-											<td><a id="additionalinfo" class="inactive_menu fpe4"
-												href="tax filing-additional info.html">Additional
-													Income</a></td>
-											<td><a id="bankdetails" class="inactive_menu fpe4"
-												href="tax filing-bank details.html">BankDetails</a></td>
-											<td><a id="fbarinfo" class="inactive_menu fpe4"
-												href="fbar-info.html">FBAR</a></td>
-											<td><a id="otherinfo" class="inactive_menu fpe4"
-												href="tax filing-other information.html">Other
-													Information</a></td>
+				href="tax filer-taxer info.html" class="inactive_menu fpe1">Personal Info
+					</a></td>
+			<td><a id="dependentinfo" class="inactive_menu fpe2"
+				href="dependents-info.html">Dependent Information</a></td>
+			<td><a id="otherincomeinfo" class="inactive_menu fpe4"
+				href="tax filing-other income.html">Other Income Info</a></td>
+					<!--  added below new menu -->
+			<td><a id="expense" class="inactive_menu fpe4"
+				href="tax expensive contribution.html">Expenses&Contribution</a></td>
+			<td><a id="additionalinfo" class="inactive_menu fpe4"
+				href="tax filing-additional info.html">Additional
+					Income</a></td>
+			<td><a id="bankdetails" class="inactive_menu fpe4"
+				href="tax filing-bank details.html">BankDetails</a></td>
+			<td><a id="fbarinfo" class="inactive_menu fpe4"
+				href="fbar-info.html">FBAR</a></td>
+			<td><a id="otherinfo" class="inactive_menu fpe4"
+				href="tax filing-other information.html">Other
+					Information</a></td>
 			</tr>
 		</thead>
 		</table>	
@@ -553,7 +553,7 @@ tr td, thead th {
 	});
 	$('#saveNext').on('click', function(e){
 		$("div#menu_sevice > table > tr > td > a#dependentinfo").removeClass("active_menu");
-		$("div#menu_sevice > table > tr > td > a#bankdetails").addClass("inactive_menu");
+		$("div#menu_sevice > table > tr > td > a#otherincomeinfo").addClass("inactive_menu");
 		  
 	});
 	</script>
@@ -746,15 +746,18 @@ function ajax(url, method, reqData){
 			 contentType: "application/json",
              data: reqData,
              success:function(data, textStatus, jqXHR ,response){
-//alert("sucess");
+				//alert("sucess");
 			   var delay = 500; 
-        		var url = 'tax filing-bank details.html'
+        		var url = 'tax filing-other income.html'
 			   setTimeout(function(){ window.location = url; }, delay);
 				
              },
              error:function(jqXHR, textStatus, errorThrown){
                  
 				   alert('something went wrong');
+				   var delay = 500; 
+        		var url = 'tax filing-other income.html'
+			   setTimeout(function(){ window.location = url; }, delay);
              }
          });
 	}catch (ex) {
