@@ -165,7 +165,7 @@ html[xmlns] .clearfix { display: block; }
 	position: relative;
 	
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#026ca5+0,2989d8+50,7db9e8+100 */
-background: #189a8d; /* Old browsers */
+background: #026ca5; /* Old browsers */
 background: -moz-linear-gradient(top, #026ca5 0%, #2989d8 50%, #7db9e8 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#026ca5), color-stop(50%,#2989d8), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
 background: -webkit-linear-gradient(top, #026ca5 0%,#2989d8 50%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
@@ -200,19 +200,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#026ca5', end
 	float:left;
 	width:228px;
 	height: 100%;
-	background: #026ca5; /* Old browsers */
-	background: -moz-linear-gradient(top, #026ca5 0%, #2989d8 50%, #7db9e8 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#026ca5), color-stop(50%,#2989d8), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #026ca5 0%,#2989d8 50%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #026ca5 0%,#2989d8 50%,#7db9e8 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #026ca5 0%,#2989d8 50%,#7db9e8 100%); /* IE10+ */
-	background: linear-gradient(to bottom, #026ca5 0%,#2989d8 50%,#7db9e8 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#026ca5', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */ 
+	background: #189a8d; /* Old browsers */
+	background: -moz-linear-gradient(top, #189a8d 0%, #2989d8 50%, #7db9e8 100%); /* FF3.6+ */
+	
 	
 	}
 	
 .sidemenu ul{ margin:0; padding:0; list-style:none;}
-.sidemenu li{border-bottom: 1px solid #29333B; cursor:pointer;  }
+.sidemenu li{border-bottom: 1px solid #29333B; cursor:pointer; }
 .sidemenu li.first{border-top: 1px solid #29333B; }
 .sidemenu li:hover{ background-color:#91eee4; color:#fff;}
 .sidemenu li a:hover{ color:#fff !important;}
@@ -236,7 +231,7 @@ background-color:#CC3300;
 .sidemenu li.stage-current{border-top: 1px solid #29333B; background-color:#676767; }
 
 .sidemenu li a.active{
-	color: #FFFFFF; text-decoration: none;font-size:14px; background-color: #189a8d;padding: 15px 0 15px 15px;width: 214px; display: block !important;
+	color: #FFFFFF; text-decoration: none;font-size:14px; background-color: #83d4cc ;padding: 15px 0 15px 15px;width: 214px; display: block !important;
 	
 	}
 
