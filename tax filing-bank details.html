@@ -168,40 +168,40 @@ else
     <!-- Start Logo -->
 		</div>
 
-  <div class="header-bottom"> 
+		<div class="header-bottom"> 
 
-    <!-- Start Breadcrumbs -->
-
-			
-			<link rel="stylesheet" type="text/css" media="all" href="css/menustyles.css">
-<nav>
-<div style="display: inline;float: left;position: relative;margin: 10px 5px 5px 7px;">
-<form method="post" action="" name="formName" class="selectyear">
-
-       <label style="padding: 0;color: #fff">Tax Year</label>
-
-                <select id="selectYear" name="year" style="padding: 0">
-                	<option value="">Select Year</option><option value="2019" selected>2019</option><option value="2018" >2018</option><option value="2017" >2017</option>                </select>
-
-                </form>
-</div>
-				<div class="wrapper">
-				<ul id="menu" class="clearfix">
-					<li><a href="homepage.html" id="Mhome">Home</a></li>
-					<li><a href="tax filer-taxer info.html" id="Mtaxfiling">Tax Filing</a></li>
-					<li><a href="referral.html" id="Mreferral">Referrals</a></li>
-					<li><a href="message.html" id="Mmessages">Messages</a></li>
-					<li><a href="setting.html" id="Msettings">Settings</a></li>
-					</ul>
-				</div>
-				<div style="display: inline;float: right;position: relative;margin: 0px;width: 150px;top:-31px">
-										<a class="payment" href="pay.php">Make Payment</a>
+			<!-- Start Breadcrumbs -->
+		
 					
-										
-				</div>
-					
-				</div>
-			</nav>
+					<link rel="stylesheet" type="text/css" media="all" href="css/menustyles.css">
+		<nav style="background-color: #189a8d">
+		<div style="display: inline;float: left;position: relative;margin: 10px 5px 5px 7px;">
+		<form method="post" action="" name="formName" class="selectyear">
+		
+			   <label style="padding: 0;color: #fff">Tax Year</label>
+		
+						<select id="selectYear" name="year" style="padding: 0">
+							<option value="">Select Year</option><option value="2019" selected>2019</option><option value="2018" >2018</option><option value="2017" >2017</option>                </select>
+		
+						</form>
+		</div>
+						<div class="wrapper">
+						<ul id="menu" class="clearfix">
+							<li><a href="homepage.html" id="Mhome">Home</a></li>
+							<li><a href="tax filer-taxer info.html" id="Mtaxfiling">Tax Filing</a></li>
+							<li><a href="referral.html" id="Mreferral">Referrals</a></li>
+							<li><a href="message.html" id="Mmessages">Messages</a></li>
+							<li><a href="setting.html" id="Msettings">Settings</a></li>
+							</ul>
+						</div>
+						<div style="display: inline;float: right;position: relative;margin: 0px;width: 150px;top:-31px">
+												<a class="payment" href="pay.php">Make Payment</a>
+							
+												
+						</div>
+							
+						</div>
+					</nav>
 			
 
 			
@@ -474,11 +474,18 @@ var tpmenuId = "bankdetails";
 	  
 	  
 	  </td></tr>
-	  <tr><td colspan="6"><table style="width: auto;"><tbody><tr><td>
-		<input type="checkbox" id="isLivingMoreThan6Months" name="isLivingMoreThan6Months" value="1"></td>
-	 <td> I declare that the Bank Details furnish herein are true & correct.</td>
-	</tr></tbody></table></td>
-	</tr>
+	
+			<tr>
+				<td
+					style="padding: 1px!important; width: 100%;float: left; font-size: 15px;">
+					declare that the Bank Details furnish herein are true & correct.
+					<input id="terms"
+						type="checkbox" title="Please Check this Box" size="6"
+						name="terms" class="required form-control"
+						style="width: 20px;" gtbfieldid="8">
+					 </td>
+			</tr>
+		
 	  <tr><td>
 	  <input type="hidden" name="customer_id" value="457168">
 	  <input type="hidden" name="user_id" value="1440">

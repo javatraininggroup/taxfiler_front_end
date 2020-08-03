@@ -527,41 +527,37 @@ var tpmenuId = "fbarinfo";
 		<td colspan="2"><strong>Foreign Bank Account Reporting (FBAR) - 2019</strong></td> 
 		</tr>
 		
-		<tr><td colspan="2"><p>If you have Transferred/Maintained $10,000 or more to any of your foreign bank account then, Please provide us the details below so that we can process your FBAR</p></td></tr>
-					   <tr><td>Did you transfer/Maintained $10,000 or more to foreign Account</td><td>
+		<tr><td colspan="2"><p>A United States person, including a citizen, resident, corporation, partnership, limited liability company, trust and estate, must file a
+			If the person transferred or maintained the aggregate value of those foreign financial accounts exceeded $10,000 at any time during the calendar year need to file
+		<br>	You must keep records for each account you must report on an FBAR that establish:</p></td></tr>
+					   <tr><td>Name on the account </td><td>
 					<input type="text" id="transferToForeignAccount" name="transferToForeignAccount" value="" />
 				</td></tr>
-					   <tr><td>A/c Belongs to</td>
-						<td><input type="text" id="accBelongsTo" name="accBelongsTo" value="" /></td></tr>
+					   <!-- <tr><td>A/c Belongs to</td>
+						<td><input type="text" id="accBelongsTo" name="accBelongsTo" value="" /></td></tr> -->
 					   <tr><td>Bank Name</td><td>
 						   <input type="text" id="bankName" name="bankName" value="" /></td></tr>
-					   <tr><td>Bank Address</td><td>
+						   <tr><td>Account number</td><td>
+							<input type="text" id="accNo" name="accNo" value="" /></td></tr>
+					   <tr><td>Name and address of the foreign bank </td><td>
 						   <input type="text" id="bankAddress" name="bankAddress" value="" /></td></tr>
-					   <tr><td>City</td><td>
+					   <tr><td> city</td><td>
 						   <input type="text" id="city" name="city" value="" /></td></tr>
-					   <tr><td ><table celpadding="0" cellspacing="0" style="width: 100%;"><tr><td>State</td><td>
-						   <input type="text" id="state" name="state" value="" /></td><td>Pin code</td></tr>
+					   <tr><td >
+						   <table celpadding="0" cellspacing="0" style="width: 100%;"><tr><td>State</td></tr>
 						</table></td><td>
-							<input type="text" id="pincode" name="pincode" value="" /></td></tr>
-					   
-					   <tr><td>Maximum value in the A/c (INR)</td><td>
+								<input type="text" id="typeOfAccount" name="typeOfAccount" value="" /></td></tr>
+					   <tr><td>Maximum value during the year</td><td>
 						   <input type="text" id="maximumValueInTheAcINR" name="maximumValueInTheAcINR" value="" /></td></tr>
-					   <tr><td>A/c No</td><td>
-						   <input type="text" id="accNo" name="accNo" value="" /></td></tr>
-					   <tr><td>Type of account</td><td>
-						   <input type="text" id="typeOfAccount" name="typeOfAccount" value="" /></td></tr>
-		
-		<td colspan="2"><strong>Note: If the aggregate of your Bank Accounts/Securities Accounts/Other Financial Accounts exceed $10,000 at any time during the tax year2019 then it’s mandatory to report.</strong></td>        		
-		
-		
-		<tr><td colspan="2" style="padding: 20px;">
-					   <input type="hidden" name="fbar_info_id" value="" />
-					   <input type="hidden" name="user_id" value="1440" />
-					   <a href="javascript:fbrinfo()" type="submit" class="button" id="add">Add</a> &nbsp; <input id="cancel" type="submit" name="cancel" value="Cancel" class="button"> 
-							<!-- <a href="tax filing-other information.html"></a>	   -->
-						</td></tr>
-					   </table>
-			 </form>
+					   
+					  <tr><td colspan="2" style="padding: 20px;">
+					<input type="hidden" name="fbar_info_id" value="" />
+					<input type="hidden" name="user_id" value="1440" />
+					<a href="javascript:fbrinfo()" type="submit" class="button" id="add">Add</a> &nbsp; <input id="cancel" type="submit" name="cancel" value="Cancel" class="button"> 
+						<!-- <a href="tax filing-other information.html"></a>	   -->
+					</td></tr>
+					</table>
+			</form>
           
 </td></tr>
 </table>       		
