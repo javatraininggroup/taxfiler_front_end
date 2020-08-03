@@ -582,15 +582,48 @@ enctype="multipart/form-data" novalidate="novalidate">
 <tr class="headingbg">
 
 <td colspan="6"><strong>Dependent Information</strong></td> 
-</tr>
+<!-- </tr>
 			   <tr><td>Name</td><td colspan="5"><input type="text" placeholder="First Name" name="firstName" id="firstName" value="" />
 				<input type="text" placeholder="Middle Name" id="middleName" name="middleName" value="" />
-				<input type="text" id="lastName" placeholder="Last Name" name="lastName" value="" /></td></tr>
-       		<tr><td>Date Of Birth</td><td>
-				   <input type="text" id="dateOfBirth" name="dateOfBirth" placeholder="MM/DD/YYYY" value="" /></td><td colspan="2">SSN/ITIN</td><td>
-					   <input type="text" class="ssn" id="ssnOrItin" name="ssnOrItin" value="" /></td>
+				<input type="text" id="lastName" placeholder="Last Name" name="lastName" value="" /></td></tr> -->
+				<tr>
+					<td>Dependent First Name</td><td>
+						<input type="text" placeholder="First Name" name="firstName" id="firstName" value="" /></td>
+					<td colspan="2">Middle Name</td><td>
+					<input type="text" placeholder="Middle Name" id="middleName" name="middleName" value="" /></td>
 				</tr>
-       		<tr  id="itinyears_tr"><td colspan="3">Have you used ITIN number in previous years tax return? please select</td>
+				<tr>
+					<td>Dependent Last Name</td><td>
+						<input type="text" id="lastName" placeholder="Last Name" name="lastName" value="" /></td>
+					<td colspan="2">Relationship </td><td>
+					<input type="text" placeholder="Relationship " id="relationship " name="relationship " value="" /></td>
+				</tr>
+       		<tr>
+				<td>Date Of Birth</td><td>
+				<input type="text" id="dateOfBirth" name="dateOfBirth" placeholder="MM/DD/YYYY" value="" /></td>
+				<td colspan="2">No. of days stayed in US(during the TaxYear )</td><td>
+				<input type="text" class="ssn" id="ssnOrItin" name="ssnOrItin" value="" /></td>
+			</tr>
+			<tr><td width="110px">Dependent Visa Type </td><td colspan="5">
+				<select style="width: 25%;" name="typeOfVisa" id="typeOfVisa">
+					<option value=" ">Select Visa Status </option>
+					<option value="Tourist Visa">Tourist Visa </option>
+					<option value="Work Visa">Work Visa</option>
+					
+				  </select>
+			</td></tr>
+			<tr>
+				<td colspan="6">
+				<table style="width: auto;"><tr><td>Dependent SSN / ITIN</td> 
+				 <td> <input type="radio" name="sp_worked_this_year" value="1" /></td>
+				 <td>SSN</td><td>
+					 <input type="radio" name="sp_worked_this_year" value="0" /></td>
+				 <td>ITIN</td>
+				 <td><input type="radio" name="sp_worked_this_year" value="0" /></td>
+				 <td>Appliying ITIN</td>
+				</tr>
+			</table></td></tr>
+       		<!-- <tr  id="itinyears_tr"><td colspan="3">Have you used ITIN number in previous years tax return? please select</td>
        		<td colspan="3">
        		<table style="width:100px">
        		<tr>
@@ -599,8 +632,8 @@ enctype="multipart/form-data" novalidate="novalidate">
 									<td>2016</td><td width="10%"><input type="checkbox"  name="checkIfITINToBeRenewed[]" value="2016"  /></td>
 								</tr>
        						</table>
-       						</td></tr>
-       		<tr><td colspan="6">
+       						</td></tr> -->
+       		<!-- <tr><td colspan="6">
        		<table width="100%">
 	       		<tr>
 		       		<td style="text-align: right;width: 150px">Check if ITIN to be applied</td><td >
@@ -611,15 +644,15 @@ enctype="multipart/form-data" novalidate="novalidate">
 						   <input type="checkbox" name="ITINRenewed" id="ITINRenewed"  value="1" /></td>
 		       	</tr>
        		</table></td>
-       		</tr>
-       		<tr><td>Relationship</td><td colspan="5"><input type="text" id="relationship" name="relationship" value="" /></td></tr>
-       		<tr><td>Visa Status</td><td colspan="5"><input type="text" id="visaStatus" name="visaStatus" value="" /></td></tr>
+       		</tr> -->
+       		<!-- <tr><td>Relationship</td><td colspan="5"><input type="text" id="relationship" name="relationship" value="" /></td></tr>
+       		<tr><td>Visa Status</td><td colspan="5"><input type="text" id="visaStatus" name="visaStatus" value="" /></td></tr> -->
 			   <tr><td colspan="6"><table style="width: auto;"><tr><td>
 				   <input type="checkbox" id="isLivingMoreThan6Months" name="isLivingMoreThan6Months"  value="1" /></td>
-				<td> Check if lived for more than 06 months with you in US during the year 2019</td>
-			</tr></table></td></tr>
-       		<tr><td colspan="6"><table style="width: auto;"><tr><td>
-				   <input type="checkbox" id="ifProvidedMoreThan50PERSupportDuringTheYearXX " name="ifProvidedMoreThan50PERSupportDuringTheYearXX"  value="1" /></td><td> Check if you provided more than 50% support during the year 2019</td></tr></table></td></tr>
+				<td> Have you stayed in the US for at least 183 days in TY 2020 ?</td>
+			</tr></table></td>
+			</tr>
+       		
        		<tr><td colspan="6"><b>Residency Details for States</b></td></tr>
        		<tr><td colspan="6">
        		
@@ -658,17 +691,16 @@ enctype="multipart/form-data" novalidate="novalidate">
        		</table>
        		
        		</td></tr>
-       		<tr><td colspan="6"><table style="width: auto;"><tr><td><input type="checkbox" name="ifYouAndYourSpouseAreWorking"  value="1" /></td><td> Check if you and your spouse are working (or) a full time student.</td></tr></table></td></tr>
+       		<tr><td colspan="6"><table style="width: auto;"><tr><td><input type="checkbox" name="ifYouAndYourSpouseAreWorking"  value="1" /></td><td> Fees paid to a licensed day care center or family day care for care of an infant or pre-schooler</td></tr></table></td></tr>
        		<tr id="ifYouAndYourSpouseAreWorking"><td colspan="6"><table style="width: auto;"><tr><td>
        		
 				<tr style="background-color:#C2C9D3;font-weight: bold;">
 					<td colspan="6"><strong>Child & Dependent Care Expenses</strong></td> 
 				</tr>
-				       		<tr><td colspan="2">Name of the institution/Person to whom these exp incurred</td><td colspan="5"><input type="text" name="amt_paid_to_name" value="" /></td></tr>
-				       		<tr><td colspan="2">Federal ID/SSN of the Institution/Person</td><td colspan="5"><input type="text" name="amt_paid_to_ssn_federal_id" value="" /></td></tr>
-				       		<tr><td colspan="2">Address of the Institution(Street Address, City, State, Zip code)</td><td colspan="5"><textarea rows="3" cols="16" name="amt_paid_to_address"></textarea></td></tr>
-				       		<tr><td colspan="2">Amount of Expenditure incurred</td><td colspan="5"><input type="text" name="expenditure_incurred" value="" /></td></tr>
-				       		<tr><td colspan="2">Amount reimbursed by the Employer, if any</td><td colspan="5"><input type="text" name="reimbursed_by_employer" value="" /></td></tr>
+				       		<tr><td colspan="2">Institution name</td><td colspan="5"><input type="text" name="amt_paid_to_name" value="" /></td></tr>
+				       		<tr><td colspan="2">Institution address(Street Address, City, State, Zip code)</td><td colspan="5"><textarea rows="3"  name="amt_paid_to_address"></textarea></td></tr>
+				       		<tr><td colspan="2">Institution tax id</td><td colspan="5"><input type="text" name="expenditure_incurred" value="" /></td></tr>
+				       	
 				
 				</td></tr></table></td></tr>
 <tr><td colspan="2" style="padding: 20px;">

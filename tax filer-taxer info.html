@@ -157,7 +157,7 @@ else
 				<tr>
 					<td width="200px" style="padding: 0px; vertical-align: top;">
 						<a id="wLogoLink"
-						href="http://34.239.168.155/taxfiler/index.html"><img
+						href="index.html"><img
 							id="logo" src="img/updated_logo.png" alt="United Tax Filer"
 							border="0" /> </a> <!-- <a id="mLogoLink" style="display: none;" href="https://m.besttaxfiler.com/clients/index.php"><img id="logo" src="img/dummy.png" alt="Logo2" border="0"/> </a> -->
 
@@ -613,7 +613,7 @@ var tpmenuId = "taxpayerinfo";
 							</thead>
 									<tbody>
 									<tr><td width="110px">Marital Status</td><td colspan="5">
-									<select name="martialStatus" id="martialStatus">
+									<select style="width: 30%;" name="martialStatus" id="martialStatus">
 										<option value="" selected="">Select </option>
 										<option value="Single">Single</option>
 										<option value="Marriage">Married</option>
@@ -624,23 +624,21 @@ var tpmenuId = "taxpayerinfo";
 								</td></tr>
 											<tr><td>SSN</td><td colspan="5">
 												<input type="text" class="ssn" name="ssn" id="ssn" value="" />
-												<input type="text" class="ssn" name="ssn" id="ssn" value="" />
-												<input type="text" class="ssn" name="ssn" id="ssn" value="" />
 											</td></tr>
 										   <tr><td>First Name</td>
 											<td>
-												<input size="16" type="text" name="firstName" id="firstName" placeholder="First Name" value="" />
+												<input  type="text" name="firstName" id="firstName" placeholder="First Name" value="" />
 											</td>
 											</tr> 
 											<tr><td>Middle Name</td>
 												<td>
-													<input size="12" type="text" placeholder="Middle Name" name="middleName" id="middleName" value="" />
+													<input  type="text" placeholder="Middle Name" name="middleName" id="middleName" value="" />
 												</td>
 												</tr>
 											<tr>
 											<td>Last Name</td>
 											<td>
-												<input size="16" type="text" name="lastName" id="lastName" placeholder="Last Name" value="" />
+												<input type="text" name="lastName" id="lastName" placeholder="Last Name" value="" />
 											</td>
 											</tr>
 											<tr>
@@ -655,31 +653,34 @@ var tpmenuId = "taxpayerinfo";
 												<input placeholder="Primary Email" type="text" name="email" id="email" />
 											</td>
 											</tr>
-											<tr>
-											<td>Occupation</td>
-											<td>
-												<input type="text" name="occupation" id="occupation" value="" />
-											</td>
-											</tr>
+				
+											<tr><td width="110px">Occupation</td><td colspan="5">
+												<select style="width: 30%;" name="occupation" id="occupation">
+													<option value="" selected="">Select Occupation </option>
+													<option value="" selected="">Home Maker </option>
+												  </select>
+											</td></tr>
 											<tr><td width="110px">Gender</td><td colspan="5">
-												<select name="Gender" id="Gender">
+												<select style="width: 30%;" name="Gender" id="Gender">
 													<option value="male" selected="">Male </option>
 													<option value="female">Female</option>
 													
 												  </select>
 											</td></tr>
-											<tr>
-												<td>Occupation</td>
-												<td>
-													<input type="text" name="occupation" id="occupation" value="" />
-												</td>
-												</tr>
-												<tr>
+												<!-- <tr>
 												<td>Visa Type</td>
 												<td>
 													<input type="text" name="typeOfVisa" id="typeOfVisa" value="" />
 												</td>
-												</tr>
+												</tr> -->
+												<tr><td width="110px">Visa Type</td><td colspan="5">
+													<select style="width: 30%;" name="typeOfVisa" id="typeOfVisa">
+														<option value=" ">Select Visa </option>
+														<option value="Tourist Visa">Tourist Visa </option>
+														<option value="Work Visa">Work Visa</option>
+														
+													  </select>
+												</td></tr>
 												<tr>
 												<td>Citizenship</td>
 												<td>
@@ -689,7 +690,7 @@ var tpmenuId = "taxpayerinfo";
 												<tr>
 												<td>First Date of Entry in US</td>
 												<td>
-													<input type="text" class="dp" name="firstDateOfEntyInUS" id="firstDateOfEntyInUS" value="" />
+													<input type="text" class=""  id="dateOfBirth"  name="firstDateOfEntyInUS" id="firstDateOfEntyInUS" value="" />
 												</td>
 												</tr>
 												<tr>
@@ -722,7 +723,7 @@ var tpmenuId = "taxpayerinfo";
 												<input type="text" placeholder="India Number" id="indiaNumber" name="indiaNumber" value="" />	
 												<input placeholder="Primary Email" type="text" name="email" id="email" /></td></tr> -->
 												<tr><td>Time Zone</td>
-												<td colspan="5"><select id="timeZone" name="timeZone">
+												<td colspan="5"><select style="width: 30%;" id="timeZone" name="timeZone">
 													<option value="">Select TimeZone</option><option value="America/New_York">EST</option><option value="America/Chicago">CST</option><option value="America/Phoenix">MST</option><option value="America/Los_Angeles">PST</option><option value="Asia/Calcutta">IST</option></select></td></tr>
 									
 										   <tr><td colspan="6"><b>Residency Details for States</b></td></tr>
@@ -776,12 +777,6 @@ var tpmenuId = "taxpayerinfo";
 							
 							</thead>
 							<tbody>
-								<!-- <tr>
-									<td width="110px">Spouse SSN / ITIN</td>
-									<td style="text-align: right;width: 150px">SSN</td><td ><input type="checkbox" name="sp_apply_itin"  value="1" /></td>
-									<td style="text-align: right;"> ITIN </td><td ><input type="checkbox" name="sp_itin_tobe_renewed"  value="1" /></td>
-									<td style="text-align: right;">Appliying ITIN </td><td ><input type="checkbox" name="sp_itin_renewed"  value="1" /></td>
-								</tr> -->
 								<tr>
 									<td colspan="6">
 									<table style="width: auto;"><tr><td>Spouse SSN / ITIN</td> 
@@ -807,38 +802,31 @@ var tpmenuId = "taxpayerinfo";
 								</td>
 							</tr>
 							<tr><td>Date Of Birth</td>
-								<td><input type="text" name="sp_dob" id="sp_dob" value="" />
+								<td><input type="text"  name="sp_dob" id="sp_dob" value="" />
 							</td></tr>
 							<tr><td>Date of Marriage </td>
-								<td><input type="text" id="dateOfBirth" placeholder="MM/DD/YYYY" name="dateOfBirth" value="" />
+								<td><input type="text" name="sp_dob" id="sp_dob" value="" />
 							</td></tr>
-							<tr><td>Occupation</td><td colspan="5"><input type="text" name="sp_occupation" value="" /></td></tr>
-							<tr>
-								<td>Visa Type</td>
-								<td>
-									<input type="text" name="typeOfVisa" id="typeOfVisa" value="" />
-								</td>
-								</tr>
-							<tr  id="sp_itinyears_tr"><td colspan="3">Have you used ITIN number in previous years tax return? please select</td>
-							<td colspan="2">
-							<table width="90%">
-						<tr>
-							<td>2018</td><td width="30%"><input type="checkbox" name="sp_itin_previous_years[]" value="2018"  /></td>
-							<td>2017</td><td width="30%"><input type="checkbox" name="sp_itin_previous_years[]" value="2017"  /></td><td>2016</td><td width="30%"><input type="checkbox" name="sp_itin_previous_years[]" value="2016"  /></td>
-						</tr>
+							
+							<tr><td width="110px">Occupation</td><td colspan="5">
+								<select style="width: 30%;" name="sp_occupation" id="occupation">
+									<option value="male" selected="">Select Occupation </option>
+									<option value="female">Home Maker</option>
+									
+								  </select>
+							</td></tr>
+							<tr><td width="110px">Visa Type</td><td colspan="5">
+								<select style="width: 30%;" name="typeOfVisa" id="typeOfVisa">
+									<option value=" ">Select Visa </option>
+									<option value="Tourist Visa">Tourist Visa </option>
+									<option value="Work Visa">Work Visa</option>
+									
+								  </select>
+							</td></tr>
+							
 						</table>
 									</td></tr>
-								<tr><td colspan="5">
-										   <table width="100%">
-											   <tr>
-												   <td style="text-align: right;width: 150px">Check if ITIN to be applied</td><td ><input type="checkbox" name="sp_apply_itin"  value="1" /></td>
-												   <td style="text-align: right;">Check if ITIN to be Renewed</td><td ><input type="checkbox" name="sp_itin_tobe_renewed"  value="1" /></td>
-												   <td style="text-align: right;">ITIN Renewed</td><td ><input type="checkbox" name="sp_itin_renewed"  value="1" /></td>
-											   </tr>
-										   </table></td>
-										   </tr>
-										   <tr><td>Entry Date into US(if applicable)</td><td colspan="5"><input type="text" class="dp" name="sp_entry_date_into_us" id="sp_entry_date_into_us" value="" /></td></tr>
-										   <tr><td>Occupation</td><td colspan="5"><input type="text" name="sp_occupation" value="" /></td></tr>
+										   
 										   <tr><td colspan="6"><table style="width: auto;"><tr><td><input type="checkbox" name="sp_live_morethan6months"  value="1" /></td><td> Check if lived for more than 06 months with you in US during the year 2019</td></tr></table></td></tr>
 							
 										   <tr><td colspan="6"><b>Residency Details for States</b></td></tr>
