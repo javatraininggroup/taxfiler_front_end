@@ -113,7 +113,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7fb6e0', end
 
 .inactive_menu{
 
-padding: 8px 2px !important;
+padding: 8px 0px !important;
 
 color:#FFF;
 
