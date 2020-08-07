@@ -778,15 +778,23 @@ var tpmenuId = "taxpayerinfo";
 							<tbody>
 								<tr>
 									<td colspan="6">
-									<table style="width: auto;"><tr><td>Spouse SSN / ITIN</td> 
-									 <td> <input type="radio" name="sp_worked_this_year" value="1" /></td>
-									 <td>SSN</td><td>
-										 <input type="radio" name="sp_worked_this_year" value="0" /></td>
-									 <td>ITIN</td>
-									 <td><input type="radio" name="sp_worked_this_year" value="0" /></td>
-									 <td>Appliying ITIN</td>
+										<table style="width: auto;"><tr><td>Spouse SSN / ITIN</td> 
+											<td> <input type="radio"  id="chkNo"  name="sp_worked_this_year" value="1" /></td>
+											<td>SSN</td><td>
+												<input type="radio"  id="chkNo" name="sp_worked_this_year" value="0" /></td>
+											<td>ITIN</td>
+											<td><input type="radio"  id="chkYes"  name="sp_worked_this_year" value="0" /></td>
+											<td>Appliying ITIN</td>
+											<td><input type="radio"  id="chkNo" name="sp_worked_this_year" value="0" /></td>
+											<td>Renewal ITIN</td>
+										   </tr>
+									   </table></td>
 									</tr>
-								</table></td></tr>
+									<tr  id="dvPinNo" style="display: none">
+										<td width="110px"></td><td colspan="5">
+											<input  type="text" placeholder="Apply ITIN" name="" id="txtPinNo" value="" />
+										</td>
+										</tr>
 								<tr>
 							<td width="110px">First Name</td><td colspan="5">
 								<input placeholder="First Name" type="text" name="sp_first_name" value="" />
@@ -918,6 +926,17 @@ s1.charset='UTF-8';
 s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
+
+$(function() {
+   $("input[name='sp_worked_this_year']").click(function() {
+     if ($("#chkYes").is(":checked")) {
+       $("#dvPinNo").show();
+     } else {
+       $("#dvPinNo").hide();
+     }
+   });
+ });
+
 </script>
 	<!--End of Tawk.to Script-->
 

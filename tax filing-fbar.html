@@ -174,14 +174,14 @@ else
 			<link rel="stylesheet" type="text/css" media="all" href="css/menustyles.css">
 <nav style="background-color: #189a8d">
 <div style="display: inline;float: left;position: relative;margin: 10px 5px 5px 7px;">
-<form method="post" action="" name="formName" class="selectyear">
+	<form method="post" action="" name="formName" class="selectyear">
 
-       <label style="padding: 0;color: #fff">Tax Year</label>
-
-                <select id="selectYear" name="year" style="padding: 0">
-                	<option value="">Select Year</option><option value="2019" selected>2019</option><option value="2018" >2018</option><option value="2017" >2017</option>                </select>
-
-                </form>
+		<label style="padding: 0;color: #fff">Tax Year</label>
+ 
+				 <select id="selectYear" name="year" style="padding: 0">
+					 <option value="">Select Year</option><option value="2019" selected>2019</option><option value="2018" >2018</option><option value="2017" >2017</option>                </select>
+ 
+				 </form>
 </div>
 				<div class="wrapper">
 				<ul id="menu" class="clearfix">
@@ -540,13 +540,13 @@ var tpmenuId = "fbarinfo";
 							<input type="text" id="accNo" name="accNo" value="" /></td></tr>
 					   <tr><td>Name and address of the foreign bank </td><td>
 						   <input type="text" id="bankAddress" name="bankAddress" value="" /></td></tr>
-					   <tr><td> city</td><td>
+					   <tr><td> City</td><td>
 						   <input type="text" id="city" name="city" value="" /></td></tr>
-					   <tr><td >
-						   <table celpadding="0" cellspacing="0" style="width: 100%;"><tr><td>State</td></tr>
-						</table></td><td>
+						   <tr><td> State</td><td>
+							<input type="text" id="state" name="state" value="" /></td></tr>
+							<tr><td> Type of account</td><td>
 								<input type="text" id="typeOfAccount" name="typeOfAccount" value="" /></td></tr>
-					   <tr><td>Maximum value during the year</td><td>
+					   	<tr><td>Maximum value during the year</td><td>
 						   <input type="text" id="maximumValueInTheAcINR" name="maximumValueInTheAcINR" value="" /></td></tr>
 					   
 					  <tr><td colspan="2" style="padding: 20px;">
@@ -557,6 +557,7 @@ var tpmenuId = "fbarinfo";
 					</td></tr>
 					</table>
 			</form>
+          
           
 </td></tr>
 </table>       		
