@@ -654,11 +654,8 @@ var tpmenuId = "taxpayerinfo";
 											</tr>
 				
 											<tr><td width="110px">Occupation</td><td colspan="5">
-												<select style="width: 30%;" name="occupation" id="occupation">
-													<option value="" selected="">Select Occupation </option>
-													<option value="" selected="">Home Maker </option>
-												  </select>
-											</td></tr>
+												<input placeholder="Occupation" type="text" name="occupation" id="occupation" />
+										  </td></tr>
 											<tr><td width="110px">Gender</td><td colspan="5">
 												<select style="width: 30%;" name="Gender" id="Gender">
 													<option value="male" selected="">Male </option>
@@ -675,8 +672,16 @@ var tpmenuId = "taxpayerinfo";
 												<tr><td width="110px">Visa Type</td><td colspan="5">
 													<select style="width: 30%;" name="typeOfVisa" id="typeOfVisa">
 														<option value=" ">Select Visa </option>
-														<option value="Tourist Visa">Tourist Visa </option>
-														<option value="Work Visa">Work Visa</option>
+														<option value=" F1"> F1</option>
+														<option value="F2 "> F2</option>
+														<option value=" H1">H1 </option>
+														<option value="H4 "> H4</option>
+														<option value="L1 "> L1</option>
+														<option value="L2 "> L2</option>
+														<option value="B1 "> B1</option>
+														<option value="B2 "> B2</option>
+														<option value="J1 "> J1</option>
+														<option value="J4 ">J4</option>
 														
 													  </select>
 												</td></tr>
@@ -779,20 +784,35 @@ var tpmenuId = "taxpayerinfo";
 								<tr>
 									<td colspan="6">
 										<table style="width: auto;"><tr><td>Spouse SSN / ITIN</td> 
-											<td> <input type="radio"  id="chkNo"  name="sp_worked_this_year" value="1" /></td>
+											<td> <input type="radio"  id="" class="sp_ssn" name="sp_worked_this_year" value="1" /></td>
 											<td>SSN</td><td>
-												<input type="radio"  id="chkNo" name="sp_worked_this_year" value="0" /></td>
+												<input type="radio"  id="" class="sp_iitn" name="sp_worked_this_year" value="0" /></td>
 											<td>ITIN</td>
-											<td><input type="radio"  id="chkYes"  name="sp_worked_this_year" value="0" /></td>
+											<td><input type="radio"  id="" class="applyiitn" name="sp_worked_this_year" value="0" /></td>
 											<td>Appliying ITIN</td>
-											<td><input type="radio"  id="chkNo" name="sp_worked_this_year" value="0" /></td>
+											<td><input type="radio"  id="chkNo" class="renewaliitn" name="sp_worked_this_year" value="0" /></td>
 											<td>Renewal ITIN</td>
 										   </tr>
 									   </table></td>
 									</tr>
-									<tr  id="dvPinNo" style="display: none">
+									<tr  class="ssn_text" style="display: none">
+									<td width="110px"></td><td colspan="5">
+										<input  type="text" placeholder="SSN" name="ssn" id="txtPinNo" value="" />
+									</td>
+									</tr>
+									<tr  class="sp_iitn_text" style="display: none">
+									<td width="110px"></td><td colspan="5">
+										<input  type="text" placeholder="  IITN" name="" id="txtPinNo" value="" />
+									</td>
+									</tr>
+									<tr  class="sp_applyiitn_text" style="display: none">
 										<td width="110px"></td><td colspan="5">
-											<input  type="text" placeholder="Apply ITIN" name="" id="txtPinNo" value="" />
+											<input  type="text" placeholder=" Apply IITN" name="" id="txtPinNo" value="" />
+										</td>
+										</tr>
+									<tr  class="sp_renewal_text" style="display: none">
+										<td width="110px"></td><td colspan="5">
+											<input  type="text" placeholder="Renewal IITN" name="" id="txtPinNo" value="" />
 										</td>
 										</tr>
 								<tr>
@@ -816,17 +836,21 @@ var tpmenuId = "taxpayerinfo";
 							</td></tr>
 							
 							<tr><td width="110px">Occupation</td><td colspan="5">
-								<select style="width: 30%;" name="sp_occupation" id="occupation">
-									<option value="male" selected="">Select Occupation </option>
-									<option value="female">Home Maker</option>
-									
-								  </select>
-							</td></tr>
+								<input placeholder="Occupation" type="text" name="occupation" id="occupation" />
+						  </td></tr>
 							<tr><td width="110px">Visa Type</td><td colspan="5">
 								<select style="width: 30%;" name="typeOfVisa" id="typeOfVisa">
 									<option value=" ">Select Visa </option>
-									<option value="Tourist Visa">Tourist Visa </option>
-									<option value="Work Visa">Work Visa</option>
+									<option value=" F1"> F1</option>
+									<option value="F2 "> F2</option>
+									<option value=" H1">H1 </option>
+									<option value="H4 "> H4</option>
+									<option value="L1 "> L1</option>
+									<option value="L2 "> L2</option>
+									<option value="B1 "> B1</option>
+									<option value="B2 "> B2</option>
+									<option value="J1 "> J1</option>
+									<option value="J4 ">J4</option>
 									
 								  </select>
 							</td></tr>
@@ -929,10 +953,25 @@ s0.parentNode.insertBefore(s1,s0);
 
 $(function() {
    $("input[name='sp_worked_this_year']").click(function() {
-     if ($("#chkYes").is(":checked")) {
-       $("#dvPinNo").show();
+     if ($(".sp_ssn").is(":checked")) {
+       $(".ssn_text").show();
      } else {
-       $("#dvPinNo").hide();
+       $(".ssn_text").hide();
+     }
+	 if ($(".sp_iitn").is(":checked")) {
+       $(".sp_iitn_text").show();
+     } else {
+       $(".sp_iitn_text").hide();
+     }
+	 if ($(".applyiitn").is(":checked")) {
+       $(".sp_applyiitn_text").show();
+     } else {
+       $(".sp_applyiitn_text").hide();
+     }
+	 if ($(".renewaliitn").is(":checked")) {
+       $(".sp_renewal_text").show();
+     } else {
+       $(".sp_renewal_text").hide();
      }
    });
  });
