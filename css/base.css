@@ -87,7 +87,7 @@ font-size: 14px;
 
 .active_menu{
 
-padding: 8px 10px !important;
+padding: 8px 3px !important;
 
 color:#0376AC;
 
@@ -113,7 +113,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7fb6e0', end
 
 .inactive_menu{
 
-padding: 8px 0px !important;
+padding: 8px 3px !important;
 
 color:#FFF;
 
@@ -472,7 +472,7 @@ address {
 
 }
 #menu_sevice{
-min-width: 900px;
+min-width: 989px;
 
 }
 
@@ -544,7 +544,7 @@ min-width: 900px;
 
 #page-content {
 
-	margin-left:250px;
+	margin-left:218px;
 
 	padding:25px 35px 25px 25px;
 
