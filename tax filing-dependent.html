@@ -620,16 +620,39 @@ enctype="multipart/form-data" novalidate="novalidate">
 				  </select>
 			</td></tr>
 			<tr>
-				<td colspan="6">
-				<table style="width: auto;"><tr><td>Dependent SSN / ITIN</td> 
-				 <td> <input type="radio" name="sp_worked_this_year" value="1" /></td>
-				 <td>SSN</td><td>
-					 <input type="radio" name="sp_worked_this_year" value="0" /></td>
-				 <td>ITIN</td>
-				 <td><input type="radio" name="sp_worked_this_year" value="0" /></td>
-				 <td>Appliying ITIN</td>
+				<td colspan="6" style="padding-left:0 !important">
+					<table style="width: auto;"><tr><td>Spouse SSN / ITIN</td> 
+						<td> <input type="radio"  id="" class="sp_ssn" name="sp_worked_this_year" value="1" /></td>
+						<td>SSN</td><td>
+							<input type="radio"  id="" class="sp_iitn" name="sp_worked_this_year" value="0" /></td>
+						<td>ITIN</td>
+						<td><input type="radio"  id="" class="applyiitn" name="sp_worked_this_year" value="0" /></td>
+						<td>Appliying ITIN</td>
+						<td><input type="radio"  id="chkNo" class="renewaliitn" name="sp_worked_this_year" value="0" /></td>
+						<td>Renewal ITIN</td>
+					   </tr>
+				   </table></td>
 				</tr>
-			</table></td></tr>
+				<tr  class="ssn_text" style="display: none">
+					<td width="110px"></td><td colspan="5">
+						<input  type="text" placeholder="SSN" name="ssn" id="txtPinNo" value="" />
+					</td>
+					</tr>
+					<tr  class="sp_iitn_text" style="display: none">
+					<td width="110px"></td><td colspan="5">
+						<input  type="text" placeholder="  IITN" name="" id="txtPinNo" value="" />
+					</td>
+					</tr>
+					<tr  class="sp_applyiitn_text" style="display: none">
+						<td width="110px"></td><td colspan="5">
+							<input  type="text" placeholder=" Apply IITN" name="" id="txtPinNo" value="" />
+						</td>
+						</tr>
+					<tr  class="sp_renewal_text" style="display: none">
+						<td width="110px"></td><td colspan="5">
+							<input  type="text" placeholder="Renewal IITN" name="" id="txtPinNo" value="" />
+						</td>
+						</tr>
        		<!-- <tr  id="itinyears_tr"><td colspan="3">Have you used ITIN number in previous years tax return? please select</td>
        		<td colspan="3">
        		<table style="width:100px">
@@ -780,6 +803,31 @@ s1.charset='UTF-8';
 s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
+
+$(function() {
+   $("input[name='sp_worked_this_year']").click(function() {
+     if ($(".sp_ssn").is(":checked")) {
+       $(".ssn_text").show();
+     } else {
+       $(".ssn_text").hide();
+     }
+	 if ($(".sp_iitn").is(":checked")) {
+       $(".sp_iitn_text").show();
+     } else {
+       $(".sp_iitn_text").hide();
+     }
+	 if ($(".applyiitn").is(":checked")) {
+       $(".sp_applyiitn_text").show();
+     } else {
+       $(".sp_applyiitn_text").hide();
+     }
+	 if ($(".renewaliitn").is(":checked")) {
+       $(".sp_renewal_text").show();
+     } else {
+       $(".sp_renewal_text").hide();
+     }
+   });
+ });
 
 function ajax(url, method, reqData){
 	try{
