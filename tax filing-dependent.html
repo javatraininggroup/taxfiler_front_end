@@ -874,7 +874,7 @@ function adddependent(){
 	taxdependent.ifYouAndYourSpouseAreWorking = $('#ifYouAndYourSpouseAreWorking').val();
         var taxdependentObj = JSON.stringify(taxdependent);
 		 //alert("taxdependentObj: "+taxdependentObj);
-		 ajax("http://34.239.168.155:8080/taxfiler-0.0.1-SNAPSHOT/api/updateuser/1/2019/dependentInfo", 'PUT',taxdependentObj);
+		 ajax("http://unitedtaxfiler.com:8080/taxfiler-0.0.1-SNAPSHOT/api/updateuser/1/2019/dependentInfo", 'PUT',taxdependentObj);
 }
 
 function dependentinfo(){

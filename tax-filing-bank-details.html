@@ -589,7 +589,7 @@ $(document).ready(function(){
          bankDetails.bankAccountType = $('#bankAccountType').val();
          var bankDetailsObj = JSON.stringify(bankDetails);
 		 console.log("bankDetailsObj:"+bankDetailsObj);
-		 ajax("http://34.239.168.155:8080/taxfiler-0.0.1-SNAPSHOT/api/updateUser/1/bankInfo", 'POST',bankDetailsObj);
+		 ajax("http://unitedtaxfiler.com:8080/taxfiler-0.0.1-SNAPSHOT/api/updateUser/1/bankInfo", 'POST',bankDetailsObj);
     });
 });
 

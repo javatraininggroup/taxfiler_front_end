@@ -35,7 +35,7 @@ function register(){
          register.preferredTimezone = $('#preferredTimezone').val();
          var registerObj = JSON.stringify(register);
 		 console.log("registerObj: "+registerObj);
-		 ajax("http://34.239.168.155:8080/taxfiler-0.0.1-SNAPSHOT/api/register", 'POST',registerObj);
+		 ajax("http://unitedtaxfiler.com:8080/taxfiler-0.0.1-SNAPSHOT/api/register", 'POST',registerObj);
 }
 
 
